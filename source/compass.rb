@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "public/wp-content/themes/starkers/css"
+css_dir = "public/wp-content/themes/uwdesign2013/css"
 sass_dir = "source/css"
 images_dir = "public/static/img"
-javascripts_dir = "public/wp-content/themes/starkers/js"
+javascripts_dir = "public/wp-content/themes/uwdesign2013/js"
 relative_assets = true
 fonts_dir = "public/static/fonts"
 
