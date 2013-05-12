@@ -2,4 +2,5 @@ web1: #component type & number
   name: wp #component settings
   document_root: public
   shared_writable_dirs:
-    - wp-content/uploads
+    - public/wp-content/uploads
+    - public/wp-content/writable
