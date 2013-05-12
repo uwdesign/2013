@@ -46,6 +46,23 @@
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 	
 	======================================================================================================================== */
+	
+	
+	function register_things() {
+    register_nav_menu('header', __( 'Header' ));
+    
+    register_taxonomy(
+      'program',
+      'user',
+      array(
+        'label' => __( 'Program' ),
+        'rewrite' => array( 'slug' => 'program' ),
+        'hierarchical' => false
+      )
+    );
+  }
+  
+  add_action( 'init', 'register_things' );
 
 
 
