@@ -1,0 +1,45 @@
+@mixin pt {
+  font-family: "PT Serif Regular", Georgia, 'Times New Roman', Times, serif; 
+  font-size-adjust:0.5;
+}
+
+@mixin pt-cap {
+  font-family:"PT Serif Caption", Georgia, 'Times New Roman', Times, serif;
+  font-size-adjust:0.53;
+}
+
+@mixin pt-bold {
+  font-family:"PT Serif Bold", Georgia, 'Times New Roman', Times, serif;
+  font-size-adjust:0.5;
+}
+
+@mixin relative {
+  font-family:"Relative Bold", 'Century Gothic', Verdana, sans-serif; 
+  font-size-adjust:0.5;
+}
+
+@mixin claremont {
+  font-family:"Claremont Light", 'Times New Roman', Times, serif;
+  font-size-adjust:0.5; 
+}
+
+// https://github.com/jlong/sass-twitter-bootstrap/blob/master/lib/_mixins.scss
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin upper {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

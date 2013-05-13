@@ -1,0 +1,83 @@
+/* /////////////////////////////////////////////////////
+
+BASE STYLES
+Only single elements. No classes or ids.
+
+///////////////////////////////////////////////////// */
+
+* { 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+  // *behavior: url(/scripts/boxsizing.htc); // <--- Use this for <= IE7 https://github.com/Schepp/box-sizing-polyfill
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-color;
+  @include pt;
+}
+
+h1, h2, h3, h4, h5, p, ul, ol, blockquote {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  @include relative;
+  @include upper;
+}
+
+h1 {
+  font-size: $size1;
+  color: $spot1;
+}
+
+h2 {
+  @include pt-bold;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: $size2;
+}
+h3 {
+  font-size: $size3;
+  margin-bottom: 10px;
+}
+h4 {}
+h5 {}
+
+a {
+  color: $spot1;
+  text-decoration: none;
+  &:hover {}
+  &:active {}
+}
+
+p, ol, ul {}
+
+p {
+  max-width: 400px;
+}
+
+ol {}
+
+ul {}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+hr {}
+
+blockquote {}
+
+form {}
+label {}
+input {}
+input[type=text] {}
+textarea {}
+select{}

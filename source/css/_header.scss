@@ -1,0 +1,41 @@
+@mixin menu-link {
+  padding: 20px 0;
+  display: inline-block;
+  font-size: $body;
+  margin: 0;
+  @include relative;
+  @include upper;
+}
+
+#header {
+  background: $white;
+  @include box-shadow(0 0 14px 3px rgba(0, 0, 0, 0.2));
+  a {
+    color: $base-color;
+  }
+}
+
+#header-inner {
+  @include clearfix;
+  width: $page-width;
+  margin: 0 auto;
+}
+
+#site-title {
+  @include menu-link;
+  float: left;
+}
+
+.menu {
+  float: right;
+  ul {
+    margin: 0;
+  }
+  a {
+    @include menu-link;
+  }
+  li {
+    display: inline;
+    margin-left: 20px;
+  }
+}

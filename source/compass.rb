@@ -7,7 +7,7 @@ sass_dir = "source/css"
 images_dir = "public/static/img"
 javascripts_dir = "public/wp-content/themes/uwdesign2013/js"
 relative_assets = true
-fonts_dir = "public/static/fonts"
+fonts_dir = "public/wp-content/themes/uwdesign2013/fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

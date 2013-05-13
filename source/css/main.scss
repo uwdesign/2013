@@ -1,0 +1,38 @@
+$base-color: #333;
+
+$page-width: 940px;
+
+$white: #fff;
+$spot1: rgb(255, 97, 87);
+
+$body: 14px;
+$size1: 32px;
+$size2: 26px;
+$size3: 19px;
+
+@import 'utils';
+@import 'compass';
+@import 'base';
+
+@import 'header';
+
+body {
+  background: rgb(243, 243, 243);
+}
+
+#main {
+  width: $page-width;
+  margin: 30px auto;
+}
+
+.pt-serif {
+  @include pt;
+}
+
+.pt-cap {
+  @include pt-cap;
+}
+
+.claremont {
+  @include claremont;
+}

@@ -1,0 +1,45 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
+
+body { font-size: 14px; line-height: 20px; color: #333333; font-family: "PT Serif Regular", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; }
+
+h1, h2, h3, h4, h5, p, ul, ol, blockquote { margin-bottom: 20px; }
+
+h1, h2, h3, h4, h5 { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; text-transform: uppercase; letter-spacing: 1px; }
+
+h1 { font-size: 32px; color: #ff6157; }
+
+h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; text-transform: none; letter-spacing: 0; font-size: 26px; }
+
+h3 { font-size: 19px; margin-bottom: 10px; }
+
+a { color: #ff6157; text-decoration: none; }
+
+p { max-width: 400px; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+#header { background: white; -webkit-box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.2); box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.2); }
+#header a { color: #333333; }
+
+#header-inner { overflow: hidden; *zoom: 1; width: 940px; margin: 0 auto; }
+
+#site-title { padding: 20px 0; display: inline-block; font-size: 14px; margin: 0; font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; text-transform: uppercase; letter-spacing: 1px; float: left; }
+
+.menu { float: right; }
+.menu ul { margin: 0; }
+.menu a { padding: 20px 0; display: inline-block; font-size: 14px; margin: 0; font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; text-transform: uppercase; letter-spacing: 1px; }
+.menu li { display: inline; margin-left: 20px; }
+
+body { background: #f3f3f3; }
+
+#main { width: 940px; margin: 30px auto; }
+
+.pt-serif { font-family: "PT Serif Regular", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; }
+
+.pt-cap { font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
+
+.claremont { font-family: "Claremont Light", 'Times New Roman', Times, serif; font-size-adjust: 0.5; }
