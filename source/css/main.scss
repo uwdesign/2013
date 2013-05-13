@@ -33,6 +33,10 @@ body {
   @include pt-cap;
 }
 
-.claremont {
-  @include claremont;
+.bookman {
+  @include bookman;
+}
+
+.calluna {
+  @include calluna;
 }

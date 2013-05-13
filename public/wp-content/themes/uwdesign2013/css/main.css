@@ -42,4 +42,6 @@ body { background: #f3f3f3; }
 
 .pt-cap { font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
 
-.claremont { font-family: "Claremont Light", 'Times New Roman', Times, serif; font-size-adjust: 0.5; }
+.bookman { font-family: "Bookmania Regular", 'Times New Roman', Times, serif; }
+
+.calluna { font-family: "Calluna Regular", Georgia, 'Times New Roman', serif; font-size-adjust: 0.457; }

@@ -18,9 +18,13 @@
   font-size-adjust:0.5;
 }
 
-@mixin claremont {
-  font-family:"Claremont Light", 'Times New Roman', Times, serif;
-  font-size-adjust:0.5; 
+@mixin bookman {
+  font-family:"Bookmania Regular", 'Times New Roman', Times, serif;
+}
+
+@mixin calluna {
+  font-family:"Calluna Regular", Georgia, 'Times New Roman', serif;
+  font-size-adjust:0.457;
 }
 
 // https://github.com/jlong/sass-twitter-bootstrap/blob/master/lib/_mixins.scss
