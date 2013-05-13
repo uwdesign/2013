@@ -16,7 +16,7 @@ h3 { font-size: 19px; }
 
 a { color: #ff6157; text-decoration: none; }
 
-p { max-width: 400px; }
+p { max-width: 300px; }
 
 strong { font-weight: bold; }
 
@@ -25,7 +25,7 @@ em { font-style: italic; }
 #header { background: white; -webkit-box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.2); box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.2); }
 #header a { color: #333333; }
 
-#header-inner { overflow: hidden; *zoom: 1; width: 940px; margin: 0 auto; }
+#header-inner { overflow: hidden; *zoom: 1; width: 1045px; margin: 0 auto; }
 
 #site-title { padding: 20px 0; display: inline-block; font-size: 14px; line-height: 1em; margin: 0; font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; text-transform: uppercase; letter-spacing: 1px; float: left; }
 
@@ -47,7 +47,7 @@ em { font-style: italic; }
 
 body { background: #f3f3f3; }
 
-#main { width: 940px; margin: 30px auto; }
+#main { width: 1045px; margin: 30px auto; }
 
 .pt-serif { font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
 
