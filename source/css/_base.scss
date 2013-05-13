@@ -18,8 +18,9 @@ html {
 }
 
 body {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: $body;
+  line-height: $body-l;
+  
   color: $base-color;
   @include pt;
 }
@@ -31,6 +32,8 @@ h1, h2, h3, h4, h5, p, ul, ol, blockquote {
 h1, h2, h3, h4, h5 {
   @include relative;
   @include upper;
+  line-height: 20px;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -43,10 +46,10 @@ h2 {
   text-transform: none;
   letter-spacing: 0;
   font-size: $size2;
+  line-height: 29px;
 }
 h3 {
   font-size: $size3;
-  margin-bottom: 10px;
 }
 h4 {}
 h5 {}

@@ -57,7 +57,7 @@
       array(
         'label' => __( 'Program' ),
         'rewrite' => array( 'slug' => 'program' ),
-        'hierarchical' => false
+        'hierarchical' => true
       )
     );
   }

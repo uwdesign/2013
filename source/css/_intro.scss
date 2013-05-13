@@ -1,0 +1,20 @@
+#intro-boxes {
+  > div {
+    float: left;
+    width: 25%;
+  }
+
+  h3 {
+    @include pt-bold;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  
+  h5 {
+    margin: 0;
+  }
+  
+  p {
+    
+  }
+}

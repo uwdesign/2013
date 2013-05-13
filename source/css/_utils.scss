@@ -1,9 +1,4 @@
 @mixin pt {
-  font-family: "PT Serif Regular", Georgia, 'Times New Roman', Times, serif; 
-  font-size-adjust:0.5;
-}
-
-@mixin pt-cap {
   font-family:"PT Serif Caption", Georgia, 'Times New Roman', Times, serif;
   font-size-adjust:0.53;
 }
@@ -16,15 +11,6 @@
 @mixin relative {
   font-family:"Relative Bold", 'Century Gothic', Verdana, sans-serif; 
   font-size-adjust:0.5;
-}
-
-@mixin bookman {
-  font-family:"Bookmania Regular", 'Times New Roman', Times, serif;
-}
-
-@mixin calluna {
-  font-family:"Calluna Regular", Georgia, 'Times New Roman', serif;
-  font-size-adjust:0.457;
 }
 
 // https://github.com/jlong/sass-twitter-bootstrap/blob/master/lib/_mixins.scss

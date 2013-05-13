@@ -5,16 +5,23 @@ $page-width: 940px;
 $white: #fff;
 $spot1: rgb(255, 97, 87);
 
-$body: 14px;
+$body: 13px;
+$body-l: 22px;
+
 $size1: 32px;
 $size2: 26px;
 $size3: 19px;
+$size4: 14px;
 
 @import 'utils';
 @import 'compass';
 @import 'base';
 
 @import 'header';
+@import 'intro';
+
+@import 'programs';
+@import 'users';
 
 body {
   background: rgb(243, 243, 243);
@@ -29,14 +36,6 @@ body {
   @include pt;
 }
 
-.pt-cap {
-  @include pt-cap;
-}
-
-.bookman {
-  @include bookman;
-}
-
-.calluna {
-  @include calluna;
+.relative {
+  @include relative;
 }

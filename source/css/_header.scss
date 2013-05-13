@@ -1,7 +1,8 @@
 @mixin menu-link {
   padding: 20px 0;
   display: inline-block;
-  font-size: $body;
+  font-size: $size4;
+  line-height: 1em;
   margin: 0;
   @include relative;
   @include upper;

@@ -1,0 +1,11 @@
+.user {
+  
+  .user-title {
+    @include relative;
+    @include upper;
+    a {
+      color: $base-color;      
+    }
+  }
+  
+}

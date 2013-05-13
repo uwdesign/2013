@@ -1889,7 +1889,7 @@ function wp_delete_category( $cat_ID ) {
  */
 function wp_get_object_terms($object_ids, $taxonomies, $args = array()) {
 	global $wpdb;
-
+	
 	if ( empty( $object_ids ) || empty( $taxonomies ) )
 		return array();
 

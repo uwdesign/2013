@@ -8,7 +8,9 @@
 <?php if ( have_posts() ): the_post(); ?>
 
   <h2><?php echo get_the_author(); ?></h2>
-
+  
+  <?php $program = wp_get_object_terms( $post->ID, 'program' ); ?>
+  
   <?php rewind_posts(); while ( have_posts() ) : the_post(); ?>
     
     <h2><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></h2>

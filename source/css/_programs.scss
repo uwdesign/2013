@@ -1,0 +1,19 @@
+#programs {
+  
+  .program {
+    float: left;
+    width: 33%;
+  }
+  
+  h2 {
+    @include relative;
+  }
+  
+  li a {
+    @include relative;
+    color: $base-color;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  
+}

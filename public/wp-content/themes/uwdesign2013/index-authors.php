@@ -8,20 +8,27 @@
 
 <?php $programs = get_terms('program'); ?>
 
-<?php foreach($programs as $program): ?>
-
-  <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->name ?></a></h2>
+<div id="programs">
+  <?php foreach($programs as $program): ?>
   
-  <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
+    <div class="program">
+      <?php print_r($program); ?>
+      <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->name; ?></a></h2>
   
-  <?php foreach( $users as $user_id): ?>
+      <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
+      
+      <ul>
+        <?php foreach( $users as $user_id): ?>
+        
+          <li><a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></li>
 
-		<h2 class="user-title"><a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></h2>
-
-  <?php endforeach; ?>  
-
-<?php endforeach; ?>
-
+        <?php endforeach; ?>  
+      </ul>
+    </div>
+    
+  <?php endforeach; ?>
+  
+</div>
 
 
 
