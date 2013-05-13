@@ -12,7 +12,7 @@
   <?php foreach($programs as $program): ?>
   
     <div class="program">
-      <?php print_r($program); ?>
+      
       <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->name; ?></a></h2>
   
       <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
