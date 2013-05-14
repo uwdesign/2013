@@ -17,7 +17,7 @@
     <div class="post-single">
       <h2><?php the_title(); ?></h2>
       <?php the_content(); ?>      
-      <?php the_author_posts_link(); ?>
+      <?php coauthors_posts_links(); ?>
     </div>
   <?php endwhile; ?>
   

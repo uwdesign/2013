@@ -20,7 +20,7 @@
       <ul>
         <?php foreach( $users as $user_id): ?>
         
-          <li><a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></li>
+          <li><a href="<?php echo esc_url( get_author_posts_url( $user_id,  get_the_author_meta( 'user_login', $user_id ) ) ); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></li>
 
         <?php endforeach; ?>  
       </ul>
