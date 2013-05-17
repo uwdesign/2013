@@ -18,10 +18,10 @@
       var self;
 
       self = this;
-      $('.menu .designers').on('mouseenter', function(e) {
+      $('.menu .designers a').on('mouseenter', function(e) {
         return self.dropDown($('#designers-menu'));
       });
-      $('.menu .work').on('mouseenter', function(e) {
+      $('.menu .work a').on('mouseenter', function(e) {
         return self.dropDown($('#work-menu'));
       });
       return $('.sub-menu').on('mouseleave', function() {

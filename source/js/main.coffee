@@ -10,10 +10,10 @@ Global =
 Menu =
   init: ->
     self = this
-    $('.menu .designers').on 'mouseenter', (e) ->
+    $('.menu .designers a').on 'mouseenter', (e) ->
       self.dropDown $('#designers-menu')
     
-    $('.menu .work').on 'mouseenter', (e) ->
+    $('.menu .work a').on 'mouseenter', (e) ->
       self.dropDown $('#work-menu')
       
     $('.sub-menu').on 'mouseleave', ->

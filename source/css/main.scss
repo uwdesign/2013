@@ -1,11 +1,13 @@
 $base-color: #333;
 
 $page-width: 1045px;
-
 $header-height: 54px;
 
+$left-col: 260px;
+$menu-col: 180px;
+
 $white: #fff;
-$spot1: rgb(255, 97, 87);
+$spot1: rgb(255, 137, 110);
 
 $body: 13px;
 $body-l: 22px;
@@ -34,6 +36,7 @@ body {
 #main {
   width: $page-width;
   margin: 30px auto;
+  padding-top: $header-height;
 }
 
 .pt-serif {

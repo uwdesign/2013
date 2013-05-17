@@ -1,4 +1,40 @@
 #work-menu {
   height: 200px;
   top: -200px;
+  
+  .categories {
+    float: left;
+    width: $menu-col * 3;
+    
+    li {
+      @include relative;
+      float: left;
+      width: $menu-col;
+    }
+    
+    a {
+      color: $base-color;
+    }
+  }
+  
+}
+
+#work-menu-title {
+  float: left;
+  width: $left-col;
+  
+  h2, p {
+    @include relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  
+  p {
+    color: $spot1;
+  }
 }
