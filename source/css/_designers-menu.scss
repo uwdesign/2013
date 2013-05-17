@@ -1,10 +1,15 @@
+$designer-height: 200px;
+
 #designers-menu {
-  height: 200px;
-  top: -200px;
+  height: $designer-height;
+  top: -$designer-height;
   
   .program {
     float: left;
-    width: 25%;
+    width: 200px;
+    &.md {
+      width: $menu-col;
+    }
   }
   
   h2 {
@@ -20,10 +25,15 @@
     color: $base-color;
     font-size: 13px;
     line-height: 20px;
-    //letter-spacing: 1px;
     width: 50%;
     padding-right: 20px;
     float: left;
   }
   
+}
+
+#programs-info {
+  width: $left-col;
+  height: 2px;
+  float: left;
 }

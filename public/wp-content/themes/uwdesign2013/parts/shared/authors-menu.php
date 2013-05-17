@@ -1,13 +1,20 @@
-<?php $programs = get_terms('program'); ?>
+<?php $programs = get_terms('program', array(
+  'order' => 'ASC',
+  'orderby' => 'id'
+) ); ?>
 
 <div id="programs">
   
+  <div id="programs-info">
+    
+  </div>
+  
   <?php foreach($programs as $program): ?>
   
-    <div class="program">
+    <div class="program <?php echo $program->slug; ?>">
       
       <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->description; ?></a></h2>
-  
+      
       <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
       
       <ul>

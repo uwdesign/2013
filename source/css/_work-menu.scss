@@ -1,6 +1,8 @@
+$work-height: 200px;
+
 #work-menu {
-  height: 200px;
-  top: -200px;
+  height: $work-height;
+  top: -$work-height;
   
   .categories {
     float: left;
