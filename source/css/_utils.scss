@@ -33,3 +33,9 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+@mixin wrapper {
+  @include clearfix;
+  width: $page-width;
+  margin: 0 auto;
+}

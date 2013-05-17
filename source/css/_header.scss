@@ -9,17 +9,17 @@
 }
 
 #header {
+  @include single-box-shadow(rgba(100, 100, 100, 0.2), 0, 0, 15px);
   background: $white;
-  @include box-shadow(0 0 14px 3px rgba(0, 0, 0, 0.2));
+  position: relative;
+  z-index: 10;
   a {
     color: $base-color;
   }
 }
 
 #header-inner {
-  @include clearfix;
-  width: $page-width;
-  margin: 0 auto;
+  @include wrapper;
 }
 
 #site-title {
@@ -28,15 +28,33 @@
 }
 
 .menu {
-  float: right;
-  ul {
-    margin: 0;
-  }
+  float: left;
+  margin: 0;
   a {
     @include menu-link;
   }
   li {
     display: inline;
     margin-left: 20px;
+  }
+}
+
+.sub-menu-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 8;
+  @include transition(top 0.2s);
+  &.open {
+    top: $header-height !important;
+  }
+}
+
+.sub-menu {
+  @include single-box-shadow(rgba(100, 100, 100, 0.2), 0, 0, 6px);
+  background: $white;
+  padding: 20px 0;
+  min-height: 100px;
+  .sub-menu-inner {
+    @include wrapper;
   }
 }

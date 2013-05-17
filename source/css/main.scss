@@ -2,6 +2,8 @@ $base-color: #333;
 
 $page-width: 1045px;
 
+$header-height: 54px;
+
 $white: #fff;
 $spot1: rgb(255, 97, 87);
 
@@ -18,9 +20,11 @@ $size4: 14px;
 @import 'base';
 
 @import 'header';
+@import 'designers-menu';
+@import 'work-menu';
 @import 'intro';
 
-@import 'programs';
+
 @import 'users';
 
 body {

@@ -1,0 +1,28 @@
+#designers-menu {
+  height: 200px;
+  top: -200px;
+  
+  .program {
+    float: left;
+    width: 25%;
+  }
+  
+  h2 {
+    @include pt-bold;
+    font-size: 16px;
+    a {
+      color: $base-color;
+    }
+  }
+  
+  li a {
+    @include relative;
+    color: $base-color;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    width: 50%;
+    float: left;
+  }
+  
+}
