@@ -9,7 +9,9 @@
 
   <h2><?php echo get_the_author(); ?></h2>
   
-  <?php $program = wp_get_object_terms( $post->ID, 'program' ); ?>
+  <img src="<?php echo get_cimyFieldValue($post->post_author, 'headshot'); ?>" />
+  
+  <?php $program = wp_get_object_terms( $post->post_author, 'program' ); ?>
     
   <?php while(have_posts()): the_post(); ?>
     
