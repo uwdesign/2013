@@ -9,7 +9,7 @@
 
   <h2><?php echo get_the_author(); ?></h2>
   
-  <img src="<?php echo get_cimyFieldValue($post->post_author, 'headshot'); ?>" />
+  <?php $user_id = $post->post_author; include(locate_template('parts/headshot.php')); ?>
   
   <?php $program = get_user_program($post->post_author); ?>
   

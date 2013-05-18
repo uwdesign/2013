@@ -19,7 +19,7 @@ $users = get_objects_in_term( $term_id, $term->taxonomy ); ?>
     
     <div class="user">
       
-      <?php echo get_avatar( get_the_author_meta( 'email', $user_id ), '96' ); ?>
+      <?php include(locate_template('parts/headshot.php')); ?>
       
       <h2 class="user-title">
         <a href="<?php echo esc_url( get_author_posts_url( $user_id,  get_the_author_meta( 'user_login', $user_id ) ) ); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a>
