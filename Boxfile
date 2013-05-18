@@ -4,3 +4,4 @@ web1: #component type & number
   shared_writable_dirs:
     - public/wp-content/uploads
     - public/wp-content/writable
+    - public/wp-content/Cimy_User_Extra_Fields/
