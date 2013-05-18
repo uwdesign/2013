@@ -1,6 +1,5 @@
 #posts {
-  @include grid;
-  
+  @include grid;  
 }
 
 .post {
@@ -12,6 +11,7 @@
     border-bottom: $spot1 2px solid;
     padding-bottom: 5px;
     margin-bottom: 15px;
+    line-height: 17px;
     a {
       color: $base-color;
     }

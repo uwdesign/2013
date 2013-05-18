@@ -75,7 +75,7 @@ em { font-style: italic; }
 #posts { overflow: hidden; *zoom: 1; margin-left: -25px; margin-right: -25px; }
 
 .post { width: 25%; float: left; padding-left: 25px; padding-right: 25px; color: #ff6157; margin-bottom: 20px; }
-.post h4 { border-bottom: #ff6157 2px solid; padding-bottom: 5px; margin-bottom: 15px; }
+.post h4 { border-bottom: #ff6157 2px solid; padding-bottom: 5px; margin-bottom: 15px; line-height: 17px; }
 .post h4 a { color: #333333; }
 .post .post__image-link { display: block; margin-bottom: 10px; -webkit-box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); -moz-box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); -webkit-transition: box-shadow 0.2s; -moz-transition: box-shadow 0.2s; -o-transition: box-shadow 0.2s; transition: box-shadow 0.2s; }
 .post .post__image-link:hover { -webkit-box-shadow: 0 0 15px rgba(50, 50, 50, 0.6); -moz-box-shadow: 0 0 15px rgba(50, 50, 50, 0.6); box-shadow: 0 0 15px rgba(50, 50, 50, 0.6); }
