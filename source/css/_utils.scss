@@ -39,3 +39,18 @@
   width: $page-width;
   margin: 0 auto;
 }
+
+
+$gutter: 25px;
+
+@mixin grid {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+@mixin col($cols, $context: 12) {
+  width: percentage($cols / $context);
+  float: left;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}

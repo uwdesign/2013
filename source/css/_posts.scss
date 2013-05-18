@@ -1,0 +1,24 @@
+#posts {
+  @include grid;
+  
+}
+
+.post {
+  @include col(3);
+  color: $spot1;
+  
+  h4 {
+    border-bottom: $spot1 2px solid;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    a {
+      color: $base-color;
+    }
+  }
+  
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+  }  
+  
+}

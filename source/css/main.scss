@@ -3,7 +3,7 @@ $base-color: #333;
 $page-width: 1045px;
 $header-height: 54px;
 
-$left-col: 220px;
+$left-col: 25%;
 $menu-col: 160px;
 
 $white: #fff;
@@ -26,8 +26,8 @@ $size4: 14px;
 @import 'work-menu';
 @import 'intro';
 
-
 @import 'users';
+@import 'posts';
 
 body {
   background: rgb(243, 243, 243);
