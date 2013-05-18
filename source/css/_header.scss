@@ -26,25 +26,27 @@
   }
 }
 
-#header-inner {
+#header-inner-wrapper {
   @include wrapper;
+}
+
+#header-inner {
+  @include grid;
 }
 
 #site-title {
   @include menu-link;
-  float: left;
-  width: $left-col;
+  @include col(3);
 }
 
 .menu {
-  float: left;
   margin: 0;
   a {
     @include menu-link;
   }
   li {
     display: inline-block;
-    width: $menu-col;
+    @include col(2);
   }
 }
 

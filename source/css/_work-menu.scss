@@ -1,17 +1,19 @@
 $work-height: 200px;
 
+#work-menu-wrapper {
+  @include grid;
+}
+
 #work-menu {
   height: $work-height;
   top: -$work-height;
   
   .categories {
+    @include col(6, 12, false);
     float: left;
-    width: $menu-col * 3;
-    
     li {
       @include relative;
-      float: left;
-      width: $menu-col;
+      @include col(2, 6);
     }
     
     a {
@@ -22,8 +24,7 @@ $work-height: 200px;
 }
 
 #work-menu-title {
-  float: left;
-  width: $left-col;
+  @include col(3);
   
   h2, p {
     @include relative;

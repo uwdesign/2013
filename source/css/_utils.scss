@@ -44,14 +44,17 @@
 $gutter: 25px;
 
 @mixin grid {
+  @include clearfix;
   margin-left: -$gutter;
   margin-right: -$gutter;
 }
 
-@mixin col($cols, $context: 12) {
+@mixin col($cols, $context: 12, $padding: true) {
   width: percentage($cols / $context);
   float: left;
-  padding-left: $gutter;
-  padding-right: $gutter;
+  @if $padding {
+    padding-left: $gutter;
+    padding-right: $gutter;    
+  }
 }
 
