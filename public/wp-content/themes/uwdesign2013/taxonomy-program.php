@@ -22,7 +22,7 @@ $users = get_objects_in_term( $term_id, $term->taxonomy ); ?>
       <?php echo get_avatar( get_the_author_meta( 'email', $user_id ), '96' ); ?>
       
       <h2 class="user-title">
-        <a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a>
+        <a href="<?php echo esc_url( get_author_posts_url( $user_id,  get_the_author_meta( 'user_login', $user_id ) ) ); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a>
       </h2>
       
       <?php $user_posts = get_posts( array( 'author' => $user_id ) ); ?>

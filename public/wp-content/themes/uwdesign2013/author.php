@@ -11,7 +11,12 @@
   
   <img src="<?php echo get_cimyFieldValue($post->post_author, 'headshot'); ?>" />
   
-  <?php $program = wp_get_object_terms( $post->post_author, 'program' ); ?>
+  <?php $program = get_user_program($post->post_author); ?>
+  
+  <?php if( $program ): ?>
+    <a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->name; ?></a>
+  <?php endif; ?>
+  
     
   <?php while(have_posts()): the_post(); ?>
     

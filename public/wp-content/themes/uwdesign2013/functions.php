@@ -27,7 +27,13 @@
 
 	add_theme_support('post-thumbnails');
 	
-	// register_nav_menus(array('primary' => 'Primary Navigation'));
+	function get_user_program($user_id) {
+	  $programs = wp_get_object_terms( $user_id, 'program' );
+    if( count($programs) ) {
+      return $programs[0];
+    }
+    return null;
+	}
 
 	/* ========================================================================================================================
 	
