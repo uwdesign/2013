@@ -6,19 +6,35 @@
 .post {
   @include col(3);
   color: $spot1;
+  margin-bottom: 20px;
   
   h4 {
     border-bottom: $spot1 2px solid;
     padding-bottom: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     a {
       color: $base-color;
     }
   }
   
+  .post__image-link {
+    display: block;
+    margin-bottom: 10px;
+    @include single-box-shadow(rgba(100, 100, 100, 0.4), 0, 0, 15px);
+    @include transition(box-shadow 0.2s);
+    &:hover {
+      @include single-box-shadow(rgba(50, 50, 50, 0.6), 0, 0, 15px);
+    }
+  }
+  
   img {
     width: 100%;
-    margin-bottom: 10px;
   }  
+  
+  .post__media, .post__author {
+    @include relative;
+    border-bottom: $grey 1px solid;
+    padding: 5px 0;
+  }
   
 }

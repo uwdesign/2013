@@ -3,7 +3,7 @@
   
   <?php if ( has_post_thumbnail() ): ?>
     
-    <?php the_post_thumbnail('medium'); ?>
+    <a class="post__image-link" href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail('medium'); ?></a>
     
   <?php endif; ?>
   
