@@ -42,6 +42,16 @@
 	function the_headshot($user_id) {
 	  include(locate_template('parts/headshot.php'));
 	}
+	
+	function the_program_link($user_id, $field) {
+	  $program = get_user_program($user_id);
+
+    if( $program ){ 
+      $url = get_term_link( $program->slug, 'program' );
+      $name = $program->$field;
+      echo "<a class='program-link' href='$url'>$name</a>";
+    }
+	}
 
 	/* ========================================================================================================================
 	

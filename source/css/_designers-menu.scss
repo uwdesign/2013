@@ -3,37 +3,4 @@ $designer-height: 200px;
 #designers-menu {
   height: $designer-height;
   top: -$designer-height;
-  
-  .program {
-    float: left;
-    width: 200px;
-    &.md {
-      width: $menu-col;
-    }
-  }
-  
-  h2 {
-    @include pt-bold;
-    font-size: 16px;
-    a {
-      color: $base-color;
-    }
-  }
-  
-  li a {
-    @include relative;
-    color: $base-color;
-    font-size: 13px;
-    line-height: 20px;
-    width: 50%;
-    padding-right: 20px;
-    float: left;
-  }
-  
-}
-
-#programs-info {
-  width: $left-col;
-  height: 2px;
-  float: left;
 }

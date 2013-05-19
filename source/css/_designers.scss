@@ -1,0 +1,92 @@
+#programs-list {
+  @include grid;
+  .program {
+    @include col(3);
+  }
+  
+  .program.md {
+    @include col(2);
+    
+    li a {
+      width: 100%;
+    }
+  }
+  
+  h2 {
+    @include pt-bold;
+    font-size: 15px;
+    a {
+      color: $base-color;
+    }
+  }
+  
+  li a {
+    @include relative;
+    color: $base-color;
+    font-size: 13px;
+    line-height: 20px;
+    width: 50%;
+    padding-right: 20px;
+    float: left;
+  }
+  
+}
+
+#programs-info {
+  width: $left-col;
+  height: 2px;
+  float: left;
+}
+
+
+
+#designers-list {
+  @include grid;
+  
+  .designer {
+    @include col(6);
+    margin-bottom: 50px;
+    
+    &:nth-child(2n+1) {
+      clear: left;
+    }
+  }
+  
+  .designer__info {
+    border-bottom: $spot1 2px solid;
+    height: 92px;
+    margin-bottom: 10px;
+  }
+  
+  .designer__headshot {
+    float: left;
+    margin-right: 30px;
+  }
+  
+  .designer__info-right {
+    float: left;
+    margin-top: 20px;
+    .program-link {
+      @include uppercase(1px);
+      color: $spot1;
+    }
+  }  
+  
+  .designer__name {
+    @include uppercase(1px);
+    margin-bottom: 0;
+    a {
+      color: $base-color;
+    }
+  }
+  
+  .designer__posts {
+    float: left;
+    clear: left;
+    width: 100%;
+    a {
+      display: block;
+    }
+  }
+  
+}

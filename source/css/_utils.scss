@@ -13,6 +13,11 @@
   font-size-adjust:0.5;
 }
 
+
+.relative {
+  @include relative;
+}
+
 // https://github.com/jlong/sass-twitter-bootstrap/blob/master/lib/_mixins.scss
 @mixin clearfix {
   *zoom: 1;
@@ -38,6 +43,12 @@
   @include clearfix;
   width: $page-width;
   margin: 0 auto;
+}
+
+@mixin uppercase($spacing) {
+  @extend .relative;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
 }
 
 
