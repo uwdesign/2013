@@ -9,7 +9,7 @@
 
   <h2><?php echo get_the_author(); ?></h2>
   
-  <?php $user_id = $post->post_author; include(locate_template('parts/headshot.php')); ?>
+  <?php the_headshot($post->post_author); ?>
   
   <?php $program = get_user_program($post->post_author); ?>
   

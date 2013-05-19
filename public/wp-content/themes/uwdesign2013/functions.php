@@ -36,7 +36,11 @@
 	}
 	
 	function get_author_permalink($user_id) {
-	  return esc_url( get_author_posts_url( $user_id,  get_the_author_meta( 'user_login', $user_id ) ) );
+	  return get_author_posts_url( $user_id,  get_the_author_meta( 'user_login', $user_id ) );
+	}
+	
+	function the_headshot($user_id) {
+	  include(locate_template('parts/headshot.php'));
 	}
 
 	/* ========================================================================================================================

@@ -56,10 +56,10 @@
     <div class="designer">
       
       <a href="<?php echo get_author_permalink($user_id); ?>">
-        <?php $user_id = $user->ID; include(locate_template('parts/headshot.php')); ?>
+        <?php the_headshot($user->ID); ?>
       </a>
       
-      <h2><a href="<?php echo get_author_permalink($user_id); ?>"><?php echo $user->display_name; ?></a></h2>
+      <h2><a href="<?php echo get_author_permalink($user->ID); ?>"><?php echo $user->display_name; ?></a></h2>
       
       <?php $designer_posts = get_posts( array('author' => $user->ID) ); ?>
       
