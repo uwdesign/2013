@@ -23,10 +23,17 @@
       </div>
       
       <?php $portfolio_link = get_cimyFieldValue($post->post_author, 'portfolio'); ?>
-
+      <?php $email_link = get_cimyFieldValue($post->post_author, 'email'); ?>
+      
       <div class="designer-single__portfolio">
-        <?php if( $portfolio_link != '' ): ?>
-          <a href="<?php echo $portfolio_link; ?>">View Portfolio</a>
+        <?php if( $portfolio_link != '' || $email_link != '' ): ?>
+          <h5>Learn More</h5>
+          <?php if( $portfolio_link != '' ): ?>
+            <a href="<?php echo $portfolio_link; ?>">View Portfolio</a>
+          <?php endif; ?>
+          <?php if( $email_link != '' ): ?>
+            <a href="<?php echo $portfolio_link; ?>">Email</a>
+          <?php endif; ?>
         <?php endif; ?>
       </div>
       

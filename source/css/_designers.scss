@@ -121,6 +121,11 @@
   
   .designer-single__info {
     @include grid;
+    position: relative;
+    > div {
+      min-height: 2px;
+      margin-bottom: 20px;
+    }
   }
   .designer-single__info-border {
     border-top: $spot1 2px solid;
@@ -150,10 +155,17 @@
   
   .designer-single__portfolio {
     @include col(2);
+    @extend .relative;
+    a {
+      display: block;
+    }
   }
   
   .designer-single__headshot {
-    @include col(3);
+    position: absolute;
+    bottom: 0;
+    right: $gutter;
+    margin: 0 !important;
     img {
       margin-right: 10px;
       float: right;

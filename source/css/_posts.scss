@@ -49,6 +49,7 @@
   
   .post-single__info {
     @include col(4);
+    @extend .relative-medium;
     h2 {
       font-size: 22px;
     }
@@ -64,12 +65,16 @@
   }
   
   .post-single__image {
-    display: block;
     margin-bottom: 30px;
     img {
+      display: block;
       width: 100%;
       height: auto;
     }
+  }
+  
+  .post-single__video {
+    margin-bottom: 30px;
   }
   
 }

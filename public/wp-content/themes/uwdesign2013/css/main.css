@@ -1,10 +1,14 @@
-.relative, #designers-list .designer__info-right .program-link, #designers-list .designer__name, .designer-single .designer-single__name h2, .designer-single .designer-single__name .program-link, .designer-single .designer-single__posts-list { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
+.relative-book { font-family: "Relative Book", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
+
+.relative-medium, .post-single .post-single__info { font-family: "Relative Medium", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; font-weight: 600; font-style: normal; }
+
+.relative, #designers-list .designer__info-right .program-link, #designers-list .designer__name, .designer-single .designer-single__name h2, .designer-single .designer-single__name .program-link, .designer-single .designer-single__posts-list, .designer-single .designer-single__portfolio { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
 
-body { font-size: 13px; line-height: 22px; color: #333333; font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
+body { font-size: 13px; line-height: 20px; color: #333333; font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
 
 h1, h2, h3, h4, h5, p, ul, ol, blockquote { margin-bottom: 20px; }
 
@@ -12,7 +16,7 @@ h1, h2, h3, h4, h5 { font-family: "Relative Bold", 'Century Gothic', Verdana, sa
 
 h1 { font-size: 32px; color: #ff6157; }
 
-h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; text-transform: none; letter-spacing: 0; font-size: 26px; line-height: 29px; }
+h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; font-weight: bold; text-transform: none; letter-spacing: 0; font-size: 26px; line-height: 29px; }
 
 h3 { font-size: 19px; }
 
@@ -57,7 +61,7 @@ em { font-style: italic; }
 
 #work-menu { height: 200px; top: -200px; }
 #work-menu .categories { width: 50%; float: left; float: left; }
-#work-menu .categories li { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; width: 33.33333%; float: left; padding-left: 24px; padding-right: 24px; }
+#work-menu .categories li { font-family: "Relative Medium", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; font-weight: 600; font-style: normal; width: 33.33333%; float: left; padding-left: 24px; padding-right: 24px; }
 #work-menu .categories a { color: #333333; }
 
 #work-menu-title { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
@@ -69,7 +73,7 @@ em { font-style: italic; }
 .intro-boxes:before, .intro-boxes:after { display: table; content: ""; line-height: 0; }
 .intro-boxes:after { clear: both; }
 .intro-boxes > div { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
-.intro-boxes h3 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; text-transform: none; letter-spacing: 0; }
+.intro-boxes h3 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; font-weight: bold; text-transform: none; letter-spacing: 0; }
 .intro-boxes h5 { margin: 0; }
 
 .user .user-title { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; text-transform: uppercase; letter-spacing: 1px; }
@@ -94,8 +98,9 @@ em { font-style: italic; }
 .post-single .post-single__info h2 { font-size: 22px; }
 .post-single .post-single__info-section { width: 50%; float: left; }
 .post-single .post-single__images { width: 66.66667%; float: left; padding-left: 24px; padding-right: 24px; }
-.post-single .post-single__image { display: block; margin-bottom: 30px; }
-.post-single .post-single__image img { width: 100%; height: auto; }
+.post-single .post-single__image { margin-bottom: 30px; }
+.post-single .post-single__image img { display: block; width: 100%; height: auto; }
+.post-single .post-single__video { margin-bottom: 30px; }
 
 #programs-list { *zoom: 1; margin-left: -24px; margin-right: -24px; margin-bottom: 100px; }
 #programs-list:before, #programs-list:after { display: table; content: ""; line-height: 0; }
@@ -103,7 +108,7 @@ em { font-style: italic; }
 #programs-list .program { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
 #programs-list .program.md { width: 16.66667%; float: left; padding-left: 24px; padding-right: 24px; }
 #programs-list .program.md li a { width: 100%; }
-#programs-list h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; font-size: 15px; }
+#programs-list h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; font-weight: bold; font-size: 15px; }
 #programs-list h2 a { color: #333333; }
 #programs-list li a { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; color: #333333; font-size: 13px; line-height: 20px; width: 50%; padding-right: 20px; float: left; }
 
@@ -128,9 +133,10 @@ em { font-style: italic; }
 #designers-list .designer__posts-wrapper:before, #designers-list .designer__posts-wrapper:after { display: table; content: ""; line-height: 0; }
 #designers-list .designer__posts-wrapper:after { clear: both; }
 
-.designer-single .designer-single__info { *zoom: 1; margin-left: -24px; margin-right: -24px; }
+.designer-single .designer-single__info { *zoom: 1; margin-left: -24px; margin-right: -24px; position: relative; }
 .designer-single .designer-single__info:before, .designer-single .designer-single__info:after { display: table; content: ""; line-height: 0; }
 .designer-single .designer-single__info:after { clear: both; }
+.designer-single .designer-single__info > div { min-height: 2px; margin-bottom: 20px; }
 .designer-single .designer-single__info-border { border-top: #ff6157 2px solid; margin: 0 0 1em; }
 .designer-single .designer-single__name { width: 33.33333%; float: left; padding-left: 24px; padding-right: 24px; }
 .designer-single .designer-single__name h2 { text-transform: uppercase; letter-spacing: 2px; }
@@ -138,7 +144,8 @@ em { font-style: italic; }
 .designer-single .designer-single__posts-list { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
 .designer-single .designer-single__posts-list a { display: block; }
 .designer-single .designer-single__portfolio { width: 16.66667%; float: left; padding-left: 24px; padding-right: 24px; }
-.designer-single .designer-single__headshot { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
+.designer-single .designer-single__portfolio a { display: block; }
+.designer-single .designer-single__headshot { position: absolute; bottom: 0; right: 24px; margin: 0 !important; }
 .designer-single .designer-single__headshot img { margin-right: 10px; float: right; }
 
 body { background: #fafafa; }
@@ -147,4 +154,4 @@ body { background: #fafafa; }
 
 .pt-serif { font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
 
-.relative, #designers-list .designer__info-right .program-link, #designers-list .designer__name, .designer-single .designer-single__name h2, .designer-single .designer-single__name .program-link, .designer-single .designer-single__posts-list { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
+.relative, #designers-list .designer__info-right .program-link, #designers-list .designer__name, .designer-single .designer-single__name h2, .designer-single .designer-single__name .program-link, .designer-single .designer-single__posts-list, .designer-single .designer-single__portfolio { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
