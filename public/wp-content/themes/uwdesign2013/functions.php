@@ -113,6 +113,28 @@
 	  
 	}
 	
+	function without_current($author) {
+    echo "$author : " . get_the_author() . '<br/>';
+	  return $author != get_the_author();
+	}
+	
+	function get_the_other_coauthors($author_id) {
+	  
+    $all_coauthors = get_coauthors();
+
+    $other_coauthors = array();
+    
+    foreach( $all_coauthors as $coauthor ) {
+      
+      if ( $coauthor->ID != $author_id ) {
+        array_push( $other_coauthors, $coauthor);
+      }
+    }
+    
+    return $other_coauthors;
+    
+	}
+	
   
 	/* ========================================================================================================================
 	

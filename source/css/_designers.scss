@@ -111,3 +111,55 @@
   }
   
 }
+
+
+
+
+
+.designer-single {
+
+  
+  .designer-single__info {
+    @include grid;
+  }
+  .designer-single__info-border {
+    border-top: $spot1 2px solid;
+    margin: 0 0 1em;
+  }
+  
+  .designer-single__name {
+    @include col(4);
+    
+    h2 {
+      @include uppercase(2px);
+    }
+    
+    .program-link {
+      @include uppercase(1px);
+    }
+    
+  }
+  
+  .designer-single__posts-list {
+    @include col(3);
+    @extend .relative;
+    a {
+      display: block;
+    }
+  }
+  
+  .designer-single__portfolio {
+    @include col(2);
+  }
+  
+  .designer-single__headshot {
+    @include col(3);
+    img {
+      margin-right: 10px;
+      float: right;
+    }
+  }
+  
+  
+  
+}

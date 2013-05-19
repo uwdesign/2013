@@ -39,3 +39,30 @@
   }
   
 }
+
+
+
+
+
+.post-single {
+  @include grid;
+  
+  .post-single__info {
+    @include col(4);
+  }
+  
+  .post-single__images {
+    @include col(8);
+  }
+  
+  .post-single__image {
+    display: block;
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+}
+

@@ -10,29 +10,11 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-<div id="post-single">
   
-  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <div class="post-single">
-      <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>      
-      <?php coauthors_posts_links(); ?>
-    </div>
-    
-    <div class="post-single__images">
-      <?php $images = get_the_remaining_post_images($post->ID); ?>
-      
-      <?php foreach( $images as $image ): ?>
-        
-        <?php printf( '<img src="%1s" width="%2s" height="%3s" />', $image[0], $image[1], $image[2] ); ?>
-        
-      <?php endforeach; ?>
-      
-    </div>
-    
-  <?php endwhile; ?>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
   
-</div>
+  <?php get_template_part('parts/post-single'); ?>
+  
+<?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
