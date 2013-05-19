@@ -91,6 +91,8 @@ em { font-style: italic; }
 .post-single:before, .post-single:after { display: table; content: ""; line-height: 0; }
 .post-single:after { clear: both; }
 .post-single .post-single__info { width: 33.33333%; float: left; padding-left: 25px; padding-right: 25px; }
+.post-single .post-single__info h2 { font-size: 22px; }
+.post-single .post-single__info-section { width: 50%; float: left; }
 .post-single .post-single__images { width: 66.66667%; float: left; padding-left: 25px; padding-right: 25px; }
 .post-single .post-single__image { display: block; margin-bottom: 30px; }
 .post-single .post-single__image img { width: 100%; height: auto; }

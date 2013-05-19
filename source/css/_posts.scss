@@ -49,6 +49,14 @@
   
   .post-single__info {
     @include col(4);
+    h2 {
+      font-size: 22px;
+    }
+  }
+  
+  .post-single__info-section {
+    width: 50%;
+    float: left;
   }
   
   .post-single__images {
