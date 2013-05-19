@@ -6,6 +6,7 @@ $header-height: 54px;
 $left-col: 25%;
 $menu-col: 160px;
 
+$body-bg: #fafafa;
 $white: #fff;
 $grey: #aaa;
 $spot1: rgb(255, 97, 87);
@@ -32,7 +33,7 @@ $size4: 14px;
 @import 'designers';
 
 body {
-  background: #fafafa;
+  background: $body-bg;
 }
 
 #main {

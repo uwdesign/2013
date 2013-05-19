@@ -115,13 +115,27 @@
 
 
 
+$designer-single-info-height: 100px;
 
 .designer-single {
 
   
   .designer-single__info {
-    @include grid;
-    position: relative;
+    position: fixed;
+    z-index: 5;
+    @include box-sizing(content-box);
+    
+    height: $designer-single-info-height;
+    width: $page-width;
+    border-bottom: $spot1 2px solid;
+    background: $body-bg;
+    padding-top: $header-height + 30;
+    top: 0;
+    
+    .designer-single__info-wrapper {
+      @include grid;
+    }
+    
     > div {
       min-height: 2px;
       margin-bottom: 20px;
@@ -170,6 +184,10 @@
       margin-right: 10px;
       float: right;
     }
+  }
+  
+  .designer-single__posts {
+    padding-top: $designer-single-info-height + 20;
   }
   
   
