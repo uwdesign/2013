@@ -1,5 +1,7 @@
 #programs-list {
   @include grid;
+  margin-bottom: 100px;
+  
   .program {
     @include col(3);
   }
@@ -60,7 +62,7 @@
   
   .designer__headshot {
     float: left;
-    margin-right: 30px;
+    margin: 0 30px 0 10px;
   }
   
   .designer__info-right {
@@ -75,6 +77,7 @@
   .designer__name {
     @include uppercase(1px);
     margin-bottom: 0;
+    font-size: 22px;
     a {
       color: $base-color;
     }
