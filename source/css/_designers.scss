@@ -62,7 +62,7 @@
   .designer__info {
     border-bottom: $spot1 2px solid;
     height: 92px;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
   }
   
   .designer__headshot {
@@ -96,19 +96,18 @@
       width: percentage(1/3);
       display: block;
       float: left;
-      padding: 0 7px;
-      height: 80px;
-      overflow: hidden;
+      padding: 0 13px;
       img {
         width: 100%;
         height: auto;
+        @include single-box-shadow(rgba(100, 100, 100, 0.2), 0, 0, 10px);
       }
     }
   }
   
   .designer__posts-wrapper {
     @include grid;
-    margin: 0 -7px;
+    margin: 0 -13px;
   }
   
 }

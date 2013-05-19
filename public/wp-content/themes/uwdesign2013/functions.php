@@ -53,8 +53,8 @@
     }
 	}
 	
-	function get_attachment_number($post_id, $number) {
-	  $attachments = get_posts( 
+	function get_post_attachments($post_id) {
+    return get_posts( 
 	    array(
 	      'post_parent' => $post_id, 
 	      'post_type' => 'attachment', 
@@ -64,11 +64,16 @@
 	      'numberposts' => -1
 	    ) 
 	  );
+	}
+	
+	function get_attachment_number($post_id, $number) {
+	  $attachments = get_post_attachments($post_id);
 	  
 	  if( count($attachments) > $number ) {
 	    $image = $attachments[$number];
+	    $size = $number == 0 ? 'thumbnail' : 'medium';
 	    if( $image ) {
-	      return wp_get_attachment_image_src( $image->ID, 'original' );
+	      return wp_get_attachment_image_src( $image->ID, $size );
 	    }
 	  }	  
 	}
@@ -88,6 +93,24 @@
 	
   function the_medium_post_thumb($post_id) {
     return display_image( get_attachment_number($post_id, 1) );
+	}
+	
+	function get_the_remaining_post_images($post_id) {
+	  
+	  $attachments = get_post_attachments($post_id);
+	  $return_list = array();
+	  if( count($attachments) > 2 ) {
+	    
+	    $remaining = array_slice($attachments, 2);
+      foreach( $remaining as $attachment ) {  
+        $image_src = wp_get_attachment_image_src($attachment->ID, 'large');
+        array_push( $return_list, $image_src );
+      }
+	    
+	  }
+	  
+	  return $return_list;
+	  
 	}
 	
   

@@ -19,6 +19,18 @@
       <?php the_content(); ?>      
       <?php coauthors_posts_links(); ?>
     </div>
+    
+    <div class="post-single__images">
+      <?php $images = get_the_remaining_post_images($post->ID); ?>
+      
+      <?php foreach( $images as $image ): ?>
+        
+        <?php printf( '<img src="%1s" width="%2s" height="%3s" />', $image[0], $image[1], $image[2] ); ?>
+        
+      <?php endforeach; ?>
+      
+    </div>
+    
   <?php endwhile; ?>
   
 </div>
