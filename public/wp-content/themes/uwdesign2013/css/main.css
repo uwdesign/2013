@@ -74,7 +74,7 @@ em { font-style: italic; }
 .post h4 a { color: #333333; }
 .post .post__image-link { display: block; margin-bottom: 10px; -webkit-box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); -moz-box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); -webkit-transition: box-shadow 0.2s; -moz-transition: box-shadow 0.2s; -o-transition: box-shadow 0.2s; transition: box-shadow 0.2s; }
 .post .post__image-link:hover { -webkit-box-shadow: 0 0 15px rgba(50, 50, 50, 0.6); -moz-box-shadow: 0 0 15px rgba(50, 50, 50, 0.6); box-shadow: 0 0 15px rgba(50, 50, 50, 0.6); }
-.post img { width: 100%; }
+.post img { width: 100%; height: auto; }
 .post .post__media, .post .post__author { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; border-bottom: #aaaaaa 1px solid; padding: 5px 0; }
 
 #programs-list { overflow: hidden; *zoom: 1; margin-left: -25px; margin-right: -25px; margin-bottom: 100px; }
@@ -89,15 +89,18 @@ em { font-style: italic; }
 
 #designers-list { overflow: hidden; *zoom: 1; margin-left: -25px; margin-right: -25px; }
 #designers-list .designer { width: 50%; float: left; padding-left: 25px; padding-right: 25px; margin-bottom: 50px; }
-#designers-list .designer:nth-child(2n+1) { clear: left; }
-#designers-list .designer__info { border-bottom: #ff6157 2px solid; height: 92px; margin-bottom: 10px; }
+#designers-list .designer:nth-child(2n+1) { clear: left; padding-right: 100px; }
+#designers-list .designer:nth-child(2n) { padding-left: 100px; }
+#designers-list .designer__info { border-bottom: #ff6157 2px solid; height: 92px; margin-bottom: 14px; }
 #designers-list .designer__headshot { float: left; margin: 0 30px 0 10px; }
 #designers-list .designer__info-right { float: left; margin-top: 20px; }
 #designers-list .designer__info-right .program-link { text-transform: uppercase; letter-spacing: 1px; color: #ff6157; }
 #designers-list .designer__name { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0; font-size: 22px; }
 #designers-list .designer__name a { color: #333333; }
 #designers-list .designer__posts { float: left; clear: left; width: 100%; }
-#designers-list .designer__posts a { display: block; }
+#designers-list .designer__posts a { display: block; width: 33.33333%; float: left; padding: 0 7px; }
+#designers-list .designer__posts a img { width: 100%; }
+#designers-list .designer__posts-wrapper { overflow: hidden; *zoom: 1; margin-left: -25px; margin-right: -25px; margin: 0 -7px; }
 
 body { background: #fafafa; }
 

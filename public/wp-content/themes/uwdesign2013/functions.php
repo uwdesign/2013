@@ -52,7 +52,45 @@
       echo "<a class='program-link' href='$url'>$name</a>";
     }
 	}
-
+	
+	function get_attachment_number($post_id, $number) {
+	  $attachments = get_posts( 
+	    array(
+	      'post_parent' => $post_id, 
+	      'post_type' => 'attachment', 
+	      'orderby' => 'menu_order', 
+	      'order' => 'ASC',
+	      'post_status' => 'inherit',
+	      'numberposts' => -1
+	    ) 
+	  );
+	  
+	  if( count($attachments) > $number ) {
+	    $image = $attachments[$number];
+	    if( $image ) {
+	      return wp_get_attachment_image_src( $image->ID, 'original' );
+	    }
+	  }	  
+	}
+	
+	function display_image($attachment) {
+    if( count($attachment) == 4 ) {
+      $src = $attachment[0];
+      $width = $attachment[1];
+      $height = $attachment[2];
+      echo "<img src='$src' width='$width' height='$height' />";
+    }
+	}
+	
+	function the_small_post_thumb($post_id) {
+    return display_image( get_attachment_number($post_id, 0) );
+	}
+	
+  function the_medium_post_thumb($post_id) {
+    return display_image( get_attachment_number($post_id, 1) );
+	}
+	
+  
 	/* ========================================================================================================================
 	
 	Actions and Filters
