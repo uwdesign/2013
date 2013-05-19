@@ -79,7 +79,7 @@ em { font-style: italic; }
 #posts:before, #posts:after { display: table; content: ""; line-height: 0; }
 #posts:after { clear: both; }
 
-.post { width: 25%; float: left; padding-left: 24px; padding-right: 24px; color: #ff6157; margin-bottom: 20px; }
+.post { width: 25%; float: left; padding-left: 24px; padding-right: 24px; color: #ff6157; margin-bottom: 40px; }
 .post h4 { border-bottom: #ff6157 2px solid; padding-bottom: 5px; margin-bottom: 15px; line-height: 17px; }
 .post h4 a { color: #333333; }
 .post .post__image-link { display: block; margin-bottom: 10px; -webkit-box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); -moz-box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); box-shadow: 0 0 15px rgba(100, 100, 100, 0.4); -webkit-transition: box-shadow 0.2s; -moz-transition: box-shadow 0.2s; -o-transition: box-shadow 0.2s; transition: box-shadow 0.2s; }

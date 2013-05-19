@@ -27,6 +27,7 @@ Menu =
 
 Posts =
   init: ->
-    $('#posts').isotope
-      masonry:
-        columnWidth: 273
+    $('#posts').imagesLoaded ->
+      $(this).isotope
+        masonry:
+          columnWidth: 273

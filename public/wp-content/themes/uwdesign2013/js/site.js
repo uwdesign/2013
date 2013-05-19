@@ -51,10 +51,12 @@
 
   Posts = {
     init: function() {
-      return $('#posts').isotope({
-        masonry: {
-          columnWidth: 273
-        }
+      return $('#posts').imagesLoaded(function() {
+        return $(this).isotope({
+          masonry: {
+            columnWidth: 273
+          }
+        });
       });
     }
   };
