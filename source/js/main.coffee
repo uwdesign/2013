@@ -5,6 +5,7 @@ $ ->
 Global =
   init: -> 
     Menu.init()
+    Posts.init()
 
 
 Menu =
@@ -13,7 +14,7 @@ Menu =
     $('.menu .designers a').on 'mouseenter', (e) ->
       self.dropDown $('#designers-menu')
     
-    $('.menu .work a').on 'mouseenter', (e) ->
+    $('.menu .work a').on 'mouseenter', (e) -> 
       self.dropDown $('#work-menu')
       
     $('.sub-menu').on 'mouseleave', ->
@@ -22,3 +23,10 @@ Menu =
   dropDown: (menu) ->
     $('.sub-menu-wrapper').removeClass('open')
     menu.addClass('open')
+
+
+Posts =
+  init: ->
+    $('#posts').isotope
+      masonry:
+        columnWidth: 273

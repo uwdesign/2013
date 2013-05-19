@@ -174,7 +174,7 @@
   
 	
 	function wpr_maintenance_mode() {
-    if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
+    if ( !is_user_logged_in() ) {
       wp_die('<img src="/lightsplash.jpg" style="width:640px" />', 'Coming soon');
     }
   }
