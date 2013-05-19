@@ -79,7 +79,7 @@
 	}
 	
 	function display_image($attachment) {
-    if( count($attachment) == 4 ) {
+    if( count($attachment) > 2 ) {
       $src = $attachment[0];
       $width = $attachment[1];
       $height = $attachment[2];
