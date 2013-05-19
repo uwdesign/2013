@@ -98,8 +98,8 @@ em { font-style: italic; }
 #designers-list .designer__name { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0; font-size: 22px; }
 #designers-list .designer__name a { color: #333333; }
 #designers-list .designer__posts { float: left; clear: left; width: 100%; }
-#designers-list .designer__posts a { display: block; width: 33.33333%; float: left; padding: 0 7px; }
-#designers-list .designer__posts a img { width: 100%; }
+#designers-list .designer__posts a { width: 33.33333%; display: block; float: left; padding: 0 7px; height: 80px; overflow: hidden; }
+#designers-list .designer__posts a img { width: 100%; height: auto; }
 #designers-list .designer__posts-wrapper { overflow: hidden; *zoom: 1; margin-left: -25px; margin-right: -25px; margin: 0 -7px; }
 
 body { background: #fafafa; }
