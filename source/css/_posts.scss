@@ -5,7 +5,7 @@
 .post {
   @include col(3);
   color: $spot1;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   
   h4 {
     border-bottom: $spot1 2px solid;
@@ -46,6 +46,7 @@
 
 .post-single {
   @include grid;
+  position: relative;
   
   .post-single__info {
     @include col(4);

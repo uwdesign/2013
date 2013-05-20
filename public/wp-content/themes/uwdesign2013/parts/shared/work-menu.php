@@ -1,7 +1,7 @@
 <div id="work-menu-wrapper">
   <div id="work-menu-title">
     <h2>Work</h2>
-    <p>Sort by Media Type</p>
+    <p><a href="<?php echo get_permalink( get_page_by_path( 'work' ) ); ?>">View All</a></p>
   </div>
 
   <ul class="categories">

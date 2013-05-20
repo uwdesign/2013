@@ -4,3 +4,42 @@ $designer-height: 200px;
   height: $designer-height;
   top: -$designer-height;
 }
+
+#programs-menu {
+  @include grid;
+}
+
+#programs-info {
+  @include col(4);
+}
+
+#programs-menu-list {
+  .program {
+    @include col(1, 7);
+    
+    span {
+      display: block;
+    }
+    
+    .program__link {
+      color: $base-color;
+      &:hover {
+        color: $spot1;
+      }
+    }
+    
+    .program__name {
+      @extend .relative;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    
+    .program__description {
+      @extend .pt-bold;
+      line-height: 1.3em;
+    }
+    
+    
+  }
+
+}

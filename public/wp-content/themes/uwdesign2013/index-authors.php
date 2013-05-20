@@ -27,26 +27,25 @@
 
 <?php // ------- List by program ------- ?>
 
-<div id="programs-list">
-  
-<?php foreach( $programs as $program ): ?>
+<div id="programs-list">  
+  <?php foreach( $programs as $program ): ?>
 
-  <div class="program <?php echo $program->slug; ?>">
+    <div class="program <?php echo $program->slug; ?>">
     
-    <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->description; ?></a></h2>
+      <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->description; ?></a></h2>
 
-    <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
+      <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
     
-    <ul>
-      <?php foreach( $users as $user_id): ?>
+      <ul>
+        <?php foreach( $users as $user_id): ?>
       
-        <li><a href="<?php echo get_author_permalink($user_id); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></li>
+          <li><a href="<?php echo get_author_permalink($user_id); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></li>
 
-      <?php endforeach; ?>  
-    </ul>
-  </div>
+        <?php endforeach; ?>  
+      </ul>
+    </div>
   
-<?php endforeach; ?>
+  <?php endforeach; ?>
 </div>
 
 
@@ -55,47 +54,11 @@
 
 <?php // ------- List designers with work ------- ?>
 
+<div id="designers-list-wrapper">
 
-<?php $users = get_users( array() ); ?>
-
-<div id="designers-list">
-  
-  <?php foreach( $users as $user ): ?>
-    
-    <div class="designer">
-      
-      <div class="designer__info">
-        
-        <a href="<?php echo get_author_permalink($user_id); ?>" class="designer__headshot">
-          <?php the_headshot($user->ID); ?>
-        </a>
-        
-        <div class="designer__info-right">
-        
-          <h2 class="designer__name"><a href="<?php echo get_author_permalink($user->ID); ?>"><?php echo $user->display_name; ?></a></h2>
-          
-          <?php the_program_link($user->ID, 'description'); ?>
-          
-        </div>
-        
-      </div>
-      
-      <?php $designer_posts = get_posts( array('author' => $user->ID) ); ?>
-      
-      <div class="designer__posts">
-        <div class="designer__posts-wrapper">
-          <?php foreach($designer_posts as $designer_post): ?>
-            <a href="<?php echo get_permalink($designer_post->ID); ?>">
-              
-              <?php the_small_post_thumb($designer_post->ID); ?>
-              
-            </a>
-          <?php endforeach; ?>
-        </div>
-      </div>
-      
-    </div>
-    
+  <?php foreach( $programs as $program ): ?>
+    <?php include( locate_template('parts/program.php') ); ?>
   <?php endforeach; ?>
 </div>
+
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

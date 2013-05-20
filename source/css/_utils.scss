@@ -9,7 +9,6 @@
   font-weight: bold;
 }
 
-
 @mixin relative-book {
   font-family: "Relative Book", 'Century Gothic', Verdana, sans-serif;
   font-size-adjust: 0.5;
@@ -25,6 +24,10 @@
 @mixin relative {
   font-family:"Relative Bold", 'Century Gothic', Verdana, sans-serif; 
   font-size-adjust:0.5;
+}
+
+.pt-bold {
+  @include pt-bold;
 }
 
 .relative-book {
