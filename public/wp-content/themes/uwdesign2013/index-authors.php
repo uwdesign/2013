@@ -11,16 +11,16 @@
 <?php // ------- Box shots ------- ?>
 
 
-<?php foreach( $programs as $program ): ?>
-  <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
-  <div class="box-shots">
-    <?php foreach( $users as $user_id): ?>
-      <div class="box-shot">
-        <img src="<?php echo get_cimyFieldValue($user_id, 'boxshot'); ?>" />
-      </div>
-    <?php endforeach; ?>
-  </div>
-<?php endforeach; ?>
+<div id="boxshots">
+  <?php foreach( $programs as $program ): ?>
+    <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
+      <?php foreach( $users as $user_id): ?>
+        <img src="<?php echo get_cimyFieldValue($user_id, 'boxshot'); ?>" data-x="<?php echo get_cimyFieldValue($user_id, 'box_x'); ?>" data-y="<?php echo get_cimyFieldValue($user_id, 'box_y'); ?>" />
+      <?php endforeach; ?>
+  <?php endforeach; ?>
+</div>
+
+
 
 <hr />
 

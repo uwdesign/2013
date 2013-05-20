@@ -1,3 +1,10 @@
+#boxshots {
+  position: relative;
+  img {
+    position: absolute;
+  }
+}
+
 #programs-list {
   @include grid;
   margin-bottom: 100px;
