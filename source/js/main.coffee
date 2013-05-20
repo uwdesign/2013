@@ -27,21 +27,24 @@ Menu =
 
 Boxes =
   init: ->
-    maxY = 0
-    z = 0
-    $('#boxshots img').each ->
-      x = $(this).data('x')
-      y = $(this).data('y')
-      z += 1
-      if y > maxY
-        maxY = y
-      $(this).css
-        left: x
-        top: y
-        'z-index': z
     
-    $('#boxshots').css
-      height: maxY + 300
+    $('#boxshots').imagesLoaded ->
+    
+      maxY = 0
+      z = 0
+      $('#boxshots img').each ->
+        x = $(this).data('x')
+        y = $(this).data('y')
+        z += 1
+        if y > maxY
+          maxY = y
+        $(this).css
+          left: x
+          top: y
+          'z-index': z
+    
+      $('#boxshots').css
+        height: maxY + 300
 
 Posts =
   init: ->

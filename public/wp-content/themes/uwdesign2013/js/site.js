@@ -52,27 +52,29 @@
 
   Boxes = {
     init: function() {
-      var maxY, z;
+      return $('#boxshots').imagesLoaded(function() {
+        var maxY, z;
 
-      maxY = 0;
-      z = 0;
-      $('#boxshots img').each(function() {
-        var x, y;
+        maxY = 0;
+        z = 0;
+        $('#boxshots img').each(function() {
+          var x, y;
 
-        x = $(this).data('x');
-        y = $(this).data('y');
-        z += 1;
-        if (y > maxY) {
-          maxY = y;
-        }
-        return $(this).css({
-          left: x,
-          top: y,
-          'z-index': z
+          x = $(this).data('x');
+          y = $(this).data('y');
+          z += 1;
+          if (y > maxY) {
+            maxY = y;
+          }
+          return $(this).css({
+            left: x,
+            top: y,
+            'z-index': z
+          });
         });
-      });
-      return $('#boxshots').css({
-        height: maxY + 300
+        return $('#boxshots').css({
+          height: maxY + 300
+        });
       });
     }
   };
