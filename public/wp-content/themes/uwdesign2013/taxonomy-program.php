@@ -7,6 +7,7 @@
 
 <?php $term_id = get_queried_object_id(); ?>
 <?php $program = get_queried_object(); ?>
+
 <div id="designers-list-wrapper">
   <?php include( locate_template('parts/program.php') ); ?>
 </div>

@@ -2,7 +2,7 @@
 
 .relative-book { font-family: "Relative Book", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
 
-.relative-medium, .post-single .post-single__info { font-family: "Relative Medium", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; font-weight: 600; font-style: normal; }
+.relative-medium, .post-single .post-single__info, #programs-list li a { font-family: "Relative Medium", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; font-weight: 600; font-style: normal; }
 
 .relative, #programs-menu-list .program .program__name, #work-menu-title p, #designers-list-wrapper > h2, #designers-list .designer__info-right .program-link, #designers-list .designer__name, .designer-single .designer-single__name h2, .designer-single .designer-single__name .program-link, .designer-single .designer-single__posts-list, .designer-single .designer-single__portfolio { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
 
@@ -119,12 +119,12 @@ em { font-style: italic; }
 #programs-list { *zoom: 1; margin-left: -24px; margin-right: -24px; margin-bottom: 100px; }
 #programs-list:before, #programs-list:after { display: table; content: ""; line-height: 0; }
 #programs-list:after { clear: both; }
-#programs-list .program { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
+#programs-list .program { width: 25%; float: left; padding-left: 24px; padding-right: 24px; padding-right: 0; }
 #programs-list .program.md { width: 16.66667%; float: left; padding-left: 24px; padding-right: 24px; }
 #programs-list .program.md li a { width: 100%; }
 #programs-list h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; font-weight: bold; font-size: 15px; }
 #programs-list h2 a { color: #333333; }
-#programs-list li a { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; color: #333333; font-size: 13px; line-height: 20px; width: 50%; padding-right: 20px; float: left; }
+#programs-list li a { color: #333333; font-size: 13px; line-height: 20px; width: 50%; float: left; }
 
 #programs-info { width: 25%; height: 2px; float: left; }
 
