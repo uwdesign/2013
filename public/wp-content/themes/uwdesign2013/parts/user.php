@@ -17,7 +17,7 @@
     
   </div>
   
-  <?php // $designer_posts = get_posts( array('author' => $user->ID) );
+  <?php
   
   $coauthor = $coauthors_plus->get_coauthor_by( 'user_login', $user->user_login );
   $coauthor_term = $coauthors_plus->get_author_term( $coauthor );
