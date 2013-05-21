@@ -17,13 +17,13 @@
       <?php foreach( $users as $user_id): ?>
         
         <?php 
-        $max = 0;
-        $x = get_cimyFieldValue($user_id, 'box_x'); 
-        $y = get_cimyFieldValue($user_id, 'box_y'); 
-        $z = get_cimyFieldValue($user_id, 'box_z'); 
+          $max = 0;
+          $x = get_cimyFieldValue($user_id, 'box_x'); 
+          $y = get_cimyFieldValue($user_id, 'box_y'); 
+          $z = get_cimyFieldValue($user_id, 'box_z'); 
         ?>
         
-        <img src="<?php echo get_cimyFieldValue($user_id, 'boxshot'); ?>" style="left: <?php echo $x; ?>px; top:<?php echo $y; ?>px; z-index:<?php echo $z; ?>" />
+        <a href="<?php echo get_author_permalink($user_id); ?>"><img data-userid="<?php echo $user_id; ?>" src="<?php echo get_cimyFieldValue($user_id, 'boxshot'); ?>" style="left: <?php echo $x; ?>px; top:<?php echo $y; ?>px; z-index:<?php echo $z; ?>" /></a>
         
         <?php if( $y > $max ) { $max = $y; } ?>
         
@@ -53,7 +53,7 @@
       <ul>
         <?php foreach( $users as $user_id): ?>
       
-          <li><a href="<?php echo get_author_permalink($user_id); ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></li>
+          <li><a href="<?php echo get_author_permalink($user_id); ?>" data-userid="<?php echo $user_id; ?>"><?php the_author_meta( 'display_name', $user_id ); ?></a></li>
 
         <?php endforeach; ?>  
       </ul>

@@ -1,7 +1,16 @@
 #boxshots {
   position: relative;
   img {
+    @include transition(opacity 0.1s);
     position: absolute;
+  }
+  &:hover {
+    img {
+      opacity: 0.2;
+    }
+    .active { 
+      opacity: 1;
+    }
   }
 }
 
@@ -31,12 +40,16 @@
   }
   
   li a {
+    @include transition(opacity 0.1s);
     @extend .relative-medium;
     color: $base-color;
     font-size: 13px;
     line-height: 20px;
     width: 50%;
     float: left;
+    &.active {
+      color: $spot1 !important;
+    }
   }
   
 }

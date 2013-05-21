@@ -6,6 +6,23 @@ Global =
   init: -> 
     Menu.init()
     Posts.init()
+    Boxes.init()
+
+Boxes =
+  
+  init: ->
+    self = this
+    
+    $('[data-userid]').on 'mouseenter', (e) ->
+      self.mouseLeaveHandler()
+      
+      userid = $(this).data('userid')
+      $("[data-userid=#{userid}]").addClass('active')
+    .on 'mouseleave', (e) ->
+      self.mouseLeaveHandler()
+      
+  mouseLeaveHandler: ->
+    $('[data-userid]').removeClass('active')
 
 
 Menu =

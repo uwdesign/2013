@@ -117,7 +117,9 @@ em { font-style: italic; }
 .post-single .post-single__video { margin-bottom: 30px; }
 
 #boxshots { position: relative; }
-#boxshots img { position: absolute; }
+#boxshots img { -webkit-transition: opacity 0.1s; -moz-transition: opacity 0.1s; -o-transition: opacity 0.1s; transition: opacity 0.1s; position: absolute; }
+#boxshots:hover img { opacity: 0.2; }
+#boxshots:hover .active { opacity: 1; }
 
 #programs-list { *zoom: 1; margin-left: -24px; margin-right: -24px; margin-bottom: 100px; }
 #programs-list:before, #programs-list:after { display: table; content: ""; line-height: 0; }
@@ -127,7 +129,8 @@ em { font-style: italic; }
 #programs-list .program.md li a { width: 100%; }
 #programs-list h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; font-weight: bold; font-size: 15px; }
 #programs-list h2 a { color: #333333; }
-#programs-list li a { color: #333333; font-size: 13px; line-height: 20px; width: 50%; float: left; }
+#programs-list li a { -webkit-transition: opacity 0.1s; -moz-transition: opacity 0.1s; -o-transition: opacity 0.1s; transition: opacity 0.1s; color: #333333; font-size: 13px; line-height: 20px; width: 50%; float: left; }
+#programs-list li a.active { color: #ff6157 !important; }
 
 #programs-info { width: 25%; height: 2px; float: left; }
 
