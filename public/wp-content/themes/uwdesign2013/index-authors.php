@@ -15,11 +15,25 @@
   <?php foreach( $programs as $program ): ?>
     <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
       <?php foreach( $users as $user_id): ?>
-        <img src="<?php echo get_cimyFieldValue($user_id, 'boxshot'); ?>" data-x="<?php echo get_cimyFieldValue($user_id, 'box_x'); ?>" data-y="<?php echo get_cimyFieldValue($user_id, 'box_y'); ?>" />
+        
+        <?php 
+        $max = 0;
+        $x = get_cimyFieldValue($user_id, 'box_x'); 
+        $y = get_cimyFieldValue($user_id, 'box_y'); 
+        $z = get_cimyFieldValue($user_id, 'box_z'); 
+        ?>
+        
+        <img src="<?php echo get_cimyFieldValue($user_id, 'boxshot'); ?>" style="left: <?php echo $x; ?>px; top:<?php echo $y; ?>px; z-index:<?php echo $z; ?>" />
+        
+        <?php if( $y > $max) { $max = $y; } ?>
+        
       <?php endforeach; ?>
+      
   <?php endforeach; ?>
+  
+  <div id="boxshot-inner" style="height:<?php echo $max + 250; ?>px"></div>
+  
 </div>
-
 
 
 <hr />

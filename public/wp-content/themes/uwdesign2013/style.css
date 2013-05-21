@@ -25,6 +25,6 @@ CONTENTS:
 @import 'css/reset.css';
 @import 'css/main.css';
 
-::-moz-selection 	{ background:#ff0; color:#333; }
-::selection 		{ background:#ff0; color:#333; }
+::-moz-selection 	{ background:rgb(255, 97, 87);; color:#333; }
+::selection 		{ background:rgb(255, 97, 87);; color:#333; }
 
