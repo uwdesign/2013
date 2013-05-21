@@ -17,17 +17,44 @@
     
   </div>
   
-  <?php $designer_posts = get_posts( array('author' => $user->ID) ); ?>
+  <?php // $designer_posts = get_posts( array('author' => $user->ID) );
+  
+  $coauthor = $coauthors_plus->get_coauthor_by( 'user_login', $user->user_login );
+  $coauthor_term = $coauthors_plus->get_author_term( $coauthor );
+  
+  if( $coauthor_term ):
+  
+    $coauthor_posts = new WP_Query( array(
+      'post_type' => 'post',
+      'posts_per_page' => 3,
+      'post_status' => 'publish',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'author',
+          'field' => 'slug',
+          'terms' => $coauthor_term->slug
+        )
+      )
+    
+    ) );
+  
+  endif;
+  
+  ?>
   
   <div class="designer__posts">
     <div class="designer__posts-wrapper">
-      <?php foreach($designer_posts as $designer_post): ?>
-        <a href="<?php echo get_permalink($designer_post->ID); ?>">
+      <?php while( $coauthor_posts->have_posts() ): ?>
+        
+        <?php $coauthor_posts->the_post(); ?>
+        
+        <a href="<?php echo get_permalink( get_the_ID() ); ?>">
           
-          <?php the_small_post_thumb($designer_post->ID); ?>
+          <?php the_small_post_thumb( get_the_ID() ); ?>
           
         </a>
-      <?php endforeach; ?>
+        
+      <?php endwhile; wp_reset_postdata(); ?>
     </div>
   </div>
   

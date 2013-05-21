@@ -25,7 +25,7 @@
         
         <img src="<?php echo get_cimyFieldValue($user_id, 'boxshot'); ?>" style="left: <?php echo $x; ?>px; top:<?php echo $y; ?>px; z-index:<?php echo $z; ?>" />
         
-        <?php if( $y > $max) { $max = $y; } ?>
+        <?php if( $y > $max ) { $max = $y; } ?>
         
       <?php endforeach; ?>
       
