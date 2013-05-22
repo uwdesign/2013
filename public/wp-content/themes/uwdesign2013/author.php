@@ -5,6 +5,10 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
+<?php $author = get_user_by( 'slug', get_query_var( 'author_name' ) ); ?>
+
+<?php query_posts('posts_per_page=3'); ?>
+
 <?php if ( have_posts() ): ?>
   
   <div class="designer-single">
@@ -15,7 +19,7 @@
         
         <div class="designer-single__name">
           <h2><?php echo get_the_author(); ?></h2>
-          <?php the_program_link($post->post_author, 'description'); ?>
+          <?php the_program_link($author->ID, 'description'); ?>
         </div>
         
         <div class="designer-single__posts-list">
@@ -25,7 +29,7 @@
           <?php endwhile; rewind_posts(); ?>
         </div>
         
-        <?php $userdata = get_userdata($post->post_author); ?>
+        <?php $userdata = get_userdata($author->ID); ?>
         
         <?php $portfolio_link = $userdata->user_url; ?>
         <?php $email_link = $userdata->user_email; ?>
@@ -34,16 +38,17 @@
           <?php if( $portfolio_link != '' || $email_link != '' ): ?>
             <h5>Learn More</h5>
             <?php if( $portfolio_link != '' ): ?>
-            <a href="<?php echo $portfolio_link; ?>">View Portfolio</a>
+              <a href="<?php echo $portfolio_link; ?>">View Portfolio</a>
             <?php endif; ?>
             <?php if( $email_link != '' ): ?>
-            <a href="mailto:<?php echo $email_link; ?>">Email</a>
+              <a href="mailto:<?php echo $email_link; ?>">Email</a>
             <?php endif; ?>
           <?php endif; ?>
         </div>
       
         <div class="designer-single__headshot">
-          <?php the_headshot($post->post_author); ?>
+
+          <?php the_headshot($author->ID); ?>
         </div>
       
       </div>
