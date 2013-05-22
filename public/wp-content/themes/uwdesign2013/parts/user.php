@@ -16,31 +16,7 @@
     </div>
     
   </div>
-  
-  <?php
-  
-  $coauthor = $coauthors_plus->get_coauthor_by( 'user_login', $user->user_login );
-  $coauthor_term = $coauthors_plus->get_author_term( $coauthor );
-  
-  if( $coauthor_term ):
-  
-    $coauthor_posts = new WP_Query( array(
-      'post_type' => 'post',
-      'posts_per_page' => 3,
-      'post_status' => 'publish',
-      'tax_query' => array(
-        array(
-          'taxonomy' => 'author',
-          'field' => 'slug',
-          'terms' => $coauthor_term->slug
-        )
-      )
-    
-    ) );
-  
-  endif;
-  
-  ?>
+  <?php $coauthor_posts = get_coauthor_posts($user->user_login, $coauthors_plus, $wp_query); ?>  
   
   <div class="designer__posts">
     <div class="designer__posts-wrapper">

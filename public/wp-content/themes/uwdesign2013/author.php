@@ -7,32 +7,7 @@
 
 <?php $author = get_user_by( 'slug', get_query_var( 'author_name' ) ); ?>
 
-<?php
-
-$coauthor = $coauthors_plus->get_coauthor_by( 'user_login', $author->user_login );
-$coauthor_term = $coauthors_plus->get_author_term( $coauthor );
-
-if( $coauthor_term ):
-
-  $coauthor_posts = new WP_Query( array(
-    'post_type' => 'post',
-    'posts_per_page' => 3,
-    'post_status' => 'publish',
-    'tax_query' => array(
-      array(
-        'taxonomy' => 'author',
-        'field' => 'slug',
-        'terms' => $coauthor_term->slug
-      )
-    )
-  
-  ) );
-
-else:
-  $coauthor_posts = $wp_query;
-endif;
-
-?>
+<?php $coauthor_posts = get_coauthor_posts($author->user_login, $coauthors_plus, $wp_query); ?>
 
 <?php if ( $coauthor_posts->have_posts() ): ?>
   
