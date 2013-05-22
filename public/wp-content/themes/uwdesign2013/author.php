@@ -7,9 +7,32 @@
 
 <?php $author = get_user_by( 'slug', get_query_var( 'author_name' ) ); ?>
 
-<?php query_posts('posts_per_page=3'); ?>
+<?php
 
-<?php if ( have_posts() ): ?>
+$coauthor = $coauthors_plus->get_coauthor_by( 'user_login', $author->user_login );
+$coauthor_term = $coauthors_plus->get_author_term( $coauthor );
+
+if( $coauthor_term ):
+
+  $coauthor_posts = new WP_Query( array(
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'post_status' => 'publish',
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'author',
+        'field' => 'slug',
+        'terms' => $coauthor_term->slug
+      )
+    )
+  
+  ) );
+
+endif;
+
+?>
+
+<?php if ( $coauthor_posts->have_posts() ): ?>
   
   <div class="designer-single">
     
@@ -24,7 +47,7 @@
         
         <div class="designer-single__posts-list">
           <h5>Projects</h5>
-          <?php while(have_posts()): the_post(); ?>
+          <?php while($coauthor_posts->have_posts()): $coauthor_posts->the_post(); ?>
             <a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a>
           <?php endwhile; rewind_posts(); ?>
         </div>
@@ -56,7 +79,7 @@
     </div>
     
     <div class="designer-single__posts">
-      <?php while(have_posts()): the_post(); ?>
+      <?php while($coauthor_posts->have_posts()): $coauthor_posts->the_post(); ?>
         <?php get_template_part('parts/post-single'); ?>
       <?php endwhile; ?>
     </div>
