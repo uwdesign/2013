@@ -28,6 +28,8 @@ if( $coauthor_term ):
   
   ) );
 
+else:
+  $coauthor_posts = $wp_query;
 endif;
 
 ?>

@@ -23,9 +23,20 @@
 
   Global = {
     init: function() {
+      var anchor, hash_name;
+
       Menu.init();
       Posts.init();
-      return Boxes.init();
+      Boxes.init();
+      if (window.location.hash) {
+        hash_name = window.location.hash.split('#').pop().split('-').pop();
+        anchor = $("#p-" + hash_name);
+        if (anchor.length) {
+          return $(document).imagesLoaded(function() {
+            return $(window).scrollTop(anchor.offset().top - 200);
+          });
+        }
+      }
     }
   };
 

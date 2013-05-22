@@ -1,5 +1,4 @@
-<div class="post-single">
-  <a name="post-<?php the_ID(); ?>"></a>
+<div id="p-<?php the_ID(); ?>" class="post-single">
   <div class="post-single__info">
     
     <h2><?php the_title(); ?></h2>
