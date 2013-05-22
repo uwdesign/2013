@@ -1,15 +1,16 @@
 #boxshots {
   position: relative;
   img {
-    @include transition(opacity 0.1s);
+    @include transition(opacity 0.03s);
     position: absolute;
   }
-  &:hover {
+  &.active {
     img {
       opacity: 0.2;
     }
     .active { 
       opacity: 1;
+      z-index: 9;
     }
   }
 }

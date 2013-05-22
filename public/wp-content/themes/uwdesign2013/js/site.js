@@ -34,14 +34,17 @@
       var self;
 
       self = this;
-      return $('[data-userid]').on('mouseenter', function(e) {
+      $('[data-userid]').on('mouseenter', function(e) {
         var userid;
 
         self.mouseLeaveHandler();
         userid = $(this).data('userid');
-        return $("[data-userid=" + userid + "]").addClass('active');
+        return $("[data-userid=" + userid + "], #boxshots").addClass('active');
       }).on('mouseleave', function(e) {
         return self.mouseLeaveHandler();
+      });
+      return $('#boxshots, #programs-list').on('mouseleave', function() {
+        return $('#boxshots').removeClass('active');
       });
     },
     mouseLeaveHandler: function() {

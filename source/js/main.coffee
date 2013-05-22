@@ -17,9 +17,12 @@ Boxes =
       self.mouseLeaveHandler()
       
       userid = $(this).data('userid')
-      $("[data-userid=#{userid}]").addClass('active')
+      $("[data-userid=#{userid}], #boxshots").addClass('active')
     .on 'mouseleave', (e) ->
       self.mouseLeaveHandler()
+    
+    $('#boxshots, #programs-list').on 'mouseleave', ->
+      $('#boxshots').removeClass('active')
       
   mouseLeaveHandler: ->
     $('[data-userid]').removeClass('active')
