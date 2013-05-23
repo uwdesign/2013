@@ -38,7 +38,7 @@
           <?php if( $portfolio_link != '' || $email_link != '' ): ?>
             <h5>Learn More</h5>
             <?php if( $portfolio_link != '' ): ?>
-              <a href="<?php echo $portfolio_link; ?>">View Portfolio</a>
+              <a href="<?php echo $portfolio_link; ?>" target="_blank">View Portfolio</a>
             <?php endif; ?>
             <?php if( $email_link != '' ): ?>
               <a href="mailto:<?php echo $email_link; ?>">Email</a>
