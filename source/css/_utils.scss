@@ -93,3 +93,11 @@ $gutter: 24px;
   }
 }
 
+@mixin black-links {
+  a {
+    color: $base-color;
+    &:hover {
+      color: $spot1;
+    }
+  }
+}

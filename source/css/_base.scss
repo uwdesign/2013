@@ -57,7 +57,9 @@ h5 {}
 a {
   color: $spot1;
   text-decoration: none;
-  &:hover {}
+  &:hover {
+    color: $spot1;
+  }
   &:active {}
 }
 

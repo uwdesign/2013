@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .pt-bold, #programs-menu-list .program .program__description, #work-menu-title h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.5; font-weight: bold; }
 
 .relative-book { font-family: "Relative Book", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
@@ -23,6 +24,7 @@ h2 { font-family: "PT Serif Bold", Georgia, 'Times New Roman', Times, serif; fon
 h3 { font-size: 19px; }
 
 a { color: #ff6157; text-decoration: none; }
+a:hover { color: #ff6157; }
 
 strong { font-weight: bold; }
 
@@ -32,6 +34,7 @@ em { font-style: italic; }
 
 #header { -webkit-box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); -moz-box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); background: white; position: relative; z-index: 100; }
 #header a { color: #333333; }
+#header a:hover { color: #ff6157; }
 
 #header-inner-wrapper { *zoom: 1; width: 1045px; margin: 0 auto; }
 #header-inner-wrapper:before, #header-inner-wrapper:after { display: table; content: ""; line-height: 0; }
@@ -76,8 +79,11 @@ em { font-style: italic; }
 
 #work-menu { height: 200px; top: -200px; }
 #work-menu .categories { width: 50%; float: left; float: left; }
-#work-menu .categories li { font-family: "Relative Medium", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; font-weight: 600; font-style: normal; width: 33.33333%; float: left; padding-left: 24px; padding-right: 24px; }
 #work-menu .categories a { color: #333333; }
+#work-menu .categories a:hover { color: #ff6157; }
+#work-menu .categories li { font-family: "Relative Medium", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; font-weight: 600; font-style: normal; width: 33.33333%; float: left; padding-left: 24px; padding-right: 24px; position: relative; }
+#work-menu .categories li.all a { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; }
+#work-menu .categories li.current-cat:before { content: '•'; position: absolute; left: 5px; font-size: 1.5em; }
 
 #work-menu-title { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
 #work-menu-title h2 { font-size: 24px; margin-bottom: 2em; }

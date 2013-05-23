@@ -21,9 +21,7 @@
   background: $white;
   position: relative;
   z-index: 100;
-  a {
-    color: $base-color;
-  }
+  @include black-links;
 }
 
 #header-inner-wrapper {

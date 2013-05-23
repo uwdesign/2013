@@ -10,14 +10,21 @@ $work-height: 200px;
   
   .categories {
     @include col(6, 12, false);
+    @include black-links;
     float: left;
     li {
       @include relative-medium;
       @include col(2, 6);
-    }
-    
-    a {
-      color: $base-color;
+      position: relative;
+      &.all a {
+        @include relative;
+      }
+      &.current-cat:before {
+        content: '•';
+        position: absolute;
+        left: 5px;
+        font-size: 1.5em;
+      }
     }
   }
   
