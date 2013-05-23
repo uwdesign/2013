@@ -44,9 +44,19 @@
 
 
 
-.post-single {
-  @include grid;
-  position: relative;
+.post-single {  
+  border-bottom: $grey 1px dotted;
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+  
+  &:last-child {
+    border: none;
+  }
+  
+  .post-single__wrapper {
+    @include grid;
+    position: relative;
+  }
   
   .post-single__info {
     @include col(4);

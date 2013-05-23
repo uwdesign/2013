@@ -128,10 +128,14 @@
       display: block;
       float: left;
       padding: 0 13px;
+      &:hover img {
+        @include single-box-shadow(rgba(100, 100, 100, 0.4), 0, 0, 10px);
+      }
       img {
         width: 100%;
         height: auto;
         @include single-box-shadow(rgba(100, 100, 100, 0.2), 0, 0, 10px);
+        @include transition(box-shadow 0.2s);
       }
     }
   }
