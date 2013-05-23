@@ -28,9 +28,9 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-#header-wrapper { position: fixed; width: 100%; top: 0; left: 0; z-index: 10; }
+#header-wrapper { position: fixed; width: 100%; top: 0; left: 0; z-index: 100; }
 
-#header { -webkit-box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); -moz-box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); background: white; position: relative; z-index: 10; }
+#header { -webkit-box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); -moz-box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); box-shadow: 0 0 15px rgba(100, 100, 100, 0.2); background: white; position: relative; z-index: 100; }
 #header a { color: #333333; }
 
 #header-inner-wrapper { *zoom: 1; width: 1045px; margin: 0 auto; }
