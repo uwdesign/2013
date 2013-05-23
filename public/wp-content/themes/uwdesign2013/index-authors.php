@@ -31,7 +31,7 @@
       
   <?php endforeach; ?>
   
-  <div id="boxshot-inner" style="height:<?php echo $max + 250; ?>px"></div>
+  <div id="boxshot-inner" style="height:<?php echo $max + 180; ?>px"></div>
   
 </div>
 

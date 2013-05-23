@@ -1,4 +1,7 @@
 window.$ = jQuery
+root_url = location.protocol + '//' + location.hostname + ':' + location.port
+images_url = root_url + '/wp-content/themes/uwdesign2013/images/'
+
 $ ->
   Global.init()
 
@@ -7,6 +10,7 @@ Global =
     Menu.init()
     Posts.init()
     Boxes.init()
+    Moment.enchiladas()
     
     if window.location.hash
       hash_name = window.location.hash.split('#').pop().split('-').pop()
@@ -14,6 +18,12 @@ Global =
       if anchor.length
         $(document).imagesLoaded ->
           $(window).scrollTop anchor.offset().top - 200
+
+Moment =
+  enchiladas: ->
+    $('#moment > div').each ->
+      img = $(this).data('img')
+      $(this).css('background', 'url(' + images_url + img + '.png)')
 
 Boxes =
   
