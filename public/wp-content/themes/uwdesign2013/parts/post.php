@@ -1,8 +1,11 @@
-<?php $url = get_author_permalink($post->post_author) . '#post-' . get_the_ID(); ?>
+<?php if ( count(get_coauthors()) > 1 ): ?>
+  <?php $url = get_permalink(); ?>
+<?php else: ?>
+  <?php $url = get_author_permalink($post->post_author) . '#post-' . get_the_ID(); ?>  
+<?php endif; ?>
 
 <div class="post">
   <h4><a href="<?php echo $url; ?> "><?php the_title(); ?></a></h4>
-    
   <a class="post__image-link" href="<?php echo $url; ?>">
     <?php the_medium_post_thumb( get_the_ID() ); ?>
   </a>
