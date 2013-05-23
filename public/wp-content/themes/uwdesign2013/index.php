@@ -15,6 +15,8 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
+<?php query_posts('orderby=rand'); ?>
+
 <?php if ( have_posts() ): ?>
 
   <div id="posts">
