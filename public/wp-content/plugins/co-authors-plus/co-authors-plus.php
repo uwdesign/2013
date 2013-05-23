@@ -677,11 +677,9 @@ class coauthors_plus {
 		if( isset( $_POST['coauthors-nonce'] ) && isset( $_POST['coauthors'] ) ) {
 			check_admin_referer( 'coauthors-edit', 'coauthors-nonce' );
 
-			if( $this->current_user_can_set_authors() ){
-				$coauthors = (array) $_POST['coauthors'];
-				$coauthors = array_map( 'sanitize_text_field', $coauthors );
-				return $this->add_coauthors( $post_id, $coauthors );
-			}
+			$coauthors = (array) $_POST['coauthors'];
+			$coauthors = array_map( 'sanitize_text_field', $coauthors );
+			return $this->add_coauthors( $post_id, $coauthors );
 		}
 	}
 
