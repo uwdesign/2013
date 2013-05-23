@@ -12,11 +12,11 @@
     <?php if( count($coauthors) ): ?>
       <div class="post-single__info-section">
         <h5>Team Members</h5>
+        
         <ul>
-          <?php foreach($coauthors as $coauthor): ?>
-            <li><a href="<?php echo get_author_permalink($coauthor->ID); ?>"><?php echo $coauthor->display_name; ?></a></li>
-          <?php endforeach; ?>
-        </ul>
+          <?php coauthors_posts_links('</li><li>', '</li><li>', '<li>', '</li>'); ?>
+        </li>
+        
       </div>
     <?php else: ?>
       <div class="post-single__info-section">
