@@ -14,11 +14,6 @@
   <div data-img="G" data-0="top:400px" data-600="top:400px"></div>
   <div data-img="N" data-0="top:-600px" data-600="top:400px"></div>
   
-  <!-- <div data-img="2" data-0="top:400px" data-300="top:400px"></div>
-  <div data-img="0" data-0="top:400px" data-300="top:400px"></div>
-  <div data-img="1" data-0="top:-200px" data-700="top:400px"></div>
-  <div data-img="3" data-0="top:-300px" data-700="top:400px"></div> -->
-  
   <div data-img="shape1a" data-0="top:200px" data-1000="top:600px"></div>
   <div data-img="shape1b" data-0="top:500px" data-1000="top:400px"></div>
   
@@ -36,7 +31,6 @@
     
   <div data-img="shape5a" data-300="top:1200px" data-900="top:450px;left:30px"></div>
   <div data-img="shape5b" data-300="top:900px" data-900="top:450px;left:30px"></div>
-  
 
 </div>
 
