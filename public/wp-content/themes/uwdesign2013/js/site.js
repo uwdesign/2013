@@ -1490,21 +1490,34 @@
 
   Global = {
     init: function() {
-      var anchor, hash_name;
+      var anchor, hash_name, self;
 
       Menu.init();
       Posts.init();
       Boxes.init();
       Moment.enchiladas();
+      self = this;
       if (window.location.hash) {
-        hash_name = window.location.hash.split('#').pop().split('-').pop();
+        hash_name = this.idfromhash(window.location.hash);
         anchor = $("#p-" + hash_name);
         if (anchor.length) {
-          return $(document).imagesLoaded(function() {
+          $(document).imagesLoaded(function() {
             return $(window).scrollTop(anchor.offset().top - 200);
           });
         }
       }
+      return $('.designer-single__posts-list a').on('click', function(e) {
+        hash_name = self.idfromhash($(this).attr('href'));
+        anchor = $("#p-" + hash_name);
+        return $(document).imagesLoaded(function() {
+          return $('html,body').animate({
+            scrollTop: anchor.offset().top - 200
+          });
+        });
+      });
+    },
+    idfromhash: function(hash) {
+      return hash.split('#').pop().split('-').pop();
     }
   };
 

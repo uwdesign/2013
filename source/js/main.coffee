@@ -12,12 +12,24 @@ Global =
     Boxes.init()
     Moment.enchiladas()
     
+    self = this
+    
     if window.location.hash
-      hash_name = window.location.hash.split('#').pop().split('-').pop()
+      hash_name = @idfromhash(window.location.hash)
       anchor = $("#p-#{hash_name}")
       if anchor.length
         $(document).imagesLoaded ->
           $(window).scrollTop anchor.offset().top - 200
+          
+    $('.designer-single__posts-list a').on 'click', (e) ->
+      hash_name = self.idfromhash($(this).attr('href'))
+      anchor = $("#p-#{hash_name}")
+      $(document).imagesLoaded ->
+        $('html,body').animate
+          scrollTop: anchor.offset().top - 200
+      
+  idfromhash: (hash) ->
+    hash.split('#').pop().split('-').pop()
 
 Moment =
   enchiladas: ->
