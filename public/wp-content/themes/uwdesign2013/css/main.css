@@ -89,7 +89,7 @@ em { font-style: italic; }
 #work-menu-title h2 { font-size: 24px; margin-bottom: 2em; }
 #work-menu-title p { text-transform: uppercase; letter-spacing: 1px; color: #ff6157; }
 
-#index-posts { margin-bottom: 3em; }
+#index-posts { margin-bottom: 3em; border-top: #ff6157 2px solid; }
 
 .intro-boxes { *zoom: 1; margin-left: -24px; margin-right: -24px; clear: left; margin-bottom: 2em; margin-top: 3em; }
 .intro-boxes:before, .intro-boxes:after { display: table; content: ""; line-height: 0; }
