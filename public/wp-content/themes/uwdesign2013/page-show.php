@@ -28,6 +28,19 @@
   <div data-img="shape5b"></div>
 </div>
 
-<?php the_content(); ?>
+<div id="index-posts">
+  <?php the_content(); ?>
+  <hr/>
+</div>
+
+<?php rewind_posts(); query_posts('orderby=rand'); ?>
+
+<h2>Work</h2>
+
+<div id="posts">
+  <?php while ( have_posts() ) : the_post(); ?>
+    <?php get_template_part('parts/post') ?>
+  <?php endwhile; ?>
+</div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

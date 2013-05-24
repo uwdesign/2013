@@ -1,7 +1,12 @@
+#index-posts {
+  margin-bottom: 3em;
+}
+
 .intro-boxes {
   @include grid;
   clear: left;
   margin-bottom: 2em;
+  margin-top: 3em;
   
   > div {
     @include col(3);
@@ -19,6 +24,7 @@
   
   p {
     @include relative-medium;
+    @include black-links;
     font-size: 11px;
     line-height: 17px;
   }
