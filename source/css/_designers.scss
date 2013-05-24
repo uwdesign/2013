@@ -1,16 +1,16 @@
 #boxshots {
   position: relative;
   img {
-    @include transition(opacity 0.03s);
+    @include transition(opacity 0.06s);
     position: absolute;
   }
   &.active {
     img {
-      opacity: 0.2;
+      opacity: 0.4;
     }
     .active { 
       opacity: 1;
-      z-index: 9;
+      z-index: 20;
     }
   }
 }

@@ -133,9 +133,9 @@ em { font-style: italic; }
 .post-single .post-single__video { margin-bottom: 30px; }
 
 #boxshots { position: relative; }
-#boxshots img { -webkit-transition: opacity 0.03s; -moz-transition: opacity 0.03s; -o-transition: opacity 0.03s; transition: opacity 0.03s; position: absolute; }
-#boxshots.active img { opacity: 0.2; }
-#boxshots.active .active { opacity: 1; z-index: 9; }
+#boxshots img { -webkit-transition: opacity 0.06s; -moz-transition: opacity 0.06s; -o-transition: opacity 0.06s; transition: opacity 0.06s; position: absolute; }
+#boxshots.active img { opacity: 0.4; }
+#boxshots.active .active { opacity: 1; z-index: 20; }
 
 #programs-list { *zoom: 1; margin-left: -24px; margin-right: -24px; margin-bottom: 100px; }
 #programs-list:before, #programs-list:after { display: table; content: ""; line-height: 0; }
