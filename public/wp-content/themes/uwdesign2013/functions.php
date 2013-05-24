@@ -164,6 +164,14 @@
     return $wp_query;
   }
   
+  function get_post_url() {
+    global $post;
+    if ( count(get_coauthors()) > 1 ){
+      return get_permalink();
+    }
+    return get_author_permalink($post->post_author) . '#post-' . get_the_ID(); 
+  }
+  
   
   /* ========================================================================================================================
   

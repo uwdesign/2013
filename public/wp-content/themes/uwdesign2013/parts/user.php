@@ -14,8 +14,8 @@
       <?php the_program_link($user->ID, 'description'); ?>
       
     </div>
-    
   </div>
+  
   <?php $coauthor_posts = get_coauthor_posts($user->user_login, $coauthors_plus, $wp_query); ?>  
   
   <div class="designer__posts">
@@ -24,7 +24,7 @@
         
         <?php $coauthor_posts->the_post(); ?>
         
-        <a href="<?php echo get_permalink( get_the_ID() ); ?>">
+        <a href="<?php echo get_post_url(); ?>">
           
           <?php the_small_post_thumb( get_the_ID() ); ?>
           

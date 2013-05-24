@@ -1,8 +1,4 @@
-<?php if ( count(get_coauthors()) > 1 ): ?>
-  <?php $url = get_permalink(); ?>
-<?php else: ?>
-  <?php $url = get_author_permalink($post->post_author) . '#post-' . get_the_ID(); ?>  
-<?php endif; ?>
+<?php $url = get_post_url(); ?>
 
 <div class="post">
   <h4><a href="<?php echo $url; ?> "><?php the_title(); ?></a></h4>
