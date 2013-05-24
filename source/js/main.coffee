@@ -24,6 +24,8 @@ Moment =
     $('#moment > div').each ->
       img = $(this).data('img')
       $(this).css('background', 'url(' + images_url + img + '.png)')
+    
+    skrollr.init()
 
 Boxes =
   
