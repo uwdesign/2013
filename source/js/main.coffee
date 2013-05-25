@@ -49,7 +49,8 @@ Moment =
       img = $(this).data('img')
       $(this).css('background', 'url(' + images_url + img + '.png)')
     
-    skrollr.init()
+    unless $.browser.mobile
+      skrollr.init()
 
 Boxes =
   
