@@ -48,6 +48,7 @@
   border-bottom: $grey 1px dotted;
   padding-bottom: 1em;
   margin-bottom: 3em;
+  position: relative;
   
   &:last-child {
     border: none;
@@ -60,7 +61,10 @@
   
   .post-single__info {
     @include col(4);
+    width: 360px;
     @extend .relative-medium;
+    position: absolute;
+    top: 0;
     h2 {
       font-size: 22px;
       margin-bottom: 8px;
@@ -74,6 +78,7 @@
   
   .post-single__images {
     @include col(8);
+    float: right;
   }
   
   .post-single__image {

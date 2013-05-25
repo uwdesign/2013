@@ -11,6 +11,7 @@ Global =
     Posts.init()
     Boxes.init()
     Moment.enchiladas()
+    Designers.init()
     
     self = this
     
@@ -37,7 +38,7 @@ Global =
       if program != '' && p.length
         e.preventDefault()
         $('html,body').animate
-          scrollTop: p.offset().top - 100
+          scrollTop: p.offset().top - 120
       
   idfromhash: (hash) ->
     hash.split('#').pop().split('-').pop()
@@ -93,3 +94,36 @@ Posts =
       $(this).isotope
         masonry:
           columnWidth: 273
+
+Designers =
+  topOffset: 200
+  init: ->
+    if $('.designer-single').length
+      $(window).on 'scroll resize', @scrollHandler
+  
+  scrollHandler: ->
+    vh = $(window).height()
+    scroll = parseInt($(this).scrollTop()) + Designers.topOffset
+    
+    $('.post-single').each ->
+      content = $('.post-single__info', this)
+      top = $(this).offset().top
+      height = $(this).height()
+      end = top + height - content.height()
+      
+      if scroll > top && scroll < end
+        content.css 
+          'position': 'fixed'
+          'top': Designers.topOffset
+          'bottom': 'auto'
+      else if scroll > top
+        content.css
+          'position': 'absolute'
+          'top':'auto'
+          'bottom': 0
+      else
+        content.css
+          'position': 'absolute'
+          'top': 0
+          'bottom': 'auto'
+      
