@@ -43,3 +43,8 @@ $work-height: 200px;
     color: $spot1;
   }
 }
+
+
+.current_page_item > a {
+  color: $spot1 !important;
+}

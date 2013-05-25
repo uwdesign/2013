@@ -11,7 +11,7 @@
 
 html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
 
-body { font-size: 13px; line-height: 20px; color: #333333; font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
+body { font-size: 13px; line-height: 20px; color: #333333; font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, p, ul, ol, blockquote { margin-bottom: 20px; }
 
@@ -89,6 +89,8 @@ em { font-style: italic; }
 #work-menu-title h2 { font-size: 24px; margin-bottom: 2em; }
 #work-menu-title p { text-transform: uppercase; letter-spacing: 1px; color: #ff6157; }
 
+.current_page_item > a { color: #ff6157 !important; }
+
 #index-posts { margin-bottom: 3em; border-top: #ff6157 2px solid; }
 
 .intro-boxes { *zoom: 1; margin-left: -24px; margin-right: -24px; clear: left; margin-bottom: 2em; margin-top: 3em; }
@@ -101,7 +103,7 @@ em { font-style: italic; }
 .intro-boxes p a { color: #333333; }
 .intro-boxes p a:hover { color: #ff6157; }
 
-#moment { position: relative; height: 1400px; }
+#moment { position: relative; z-index: -1; height: 1400px; }
 #moment > div { margin-left: -203.5px; position: absolute; height: 1052px; width: 1452px; background-repeat: none; }
 
 .user .user-title { font-family: "Relative Bold", 'Century Gothic', Verdana, sans-serif; font-size-adjust: 0.5; text-transform: uppercase; letter-spacing: 1px; }
