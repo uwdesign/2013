@@ -40,14 +40,24 @@
 
 
 <?php // ------- List by program ------- ?>
+<div id="programs-header">
+  <div class="programs-list">
+    <?php foreach( $programs as $program ): ?>
 
-<div id="programs-list">  
+      <div class="program <?php echo $program->slug; ?>">
+  
+        <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->description; ?></a></h2>
+      </div>
+  
+    <?php endforeach; ?>
+
+  </div>
+</div>
+<div class="programs-list">
   <?php foreach( $programs as $program ): ?>
-
-    <div class="program <?php echo $program->slug; ?>">
     
-      <h2><a href="<?php echo get_term_link( $program->slug, 'program' ); ?>"><?php echo $program->description; ?></a></h2>
-
+    <div class="program <?php echo $program->slug; ?>">
+      
       <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
     
       <ul>

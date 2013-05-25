@@ -15,9 +15,18 @@
   }
 }
 
-#programs-list {
+#programs-header {
+  width: $page-width;
+  padding-top: 20px;
+  background: $body-bg;
+}
+
+.is-sticky #programs-header {
+  border-bottom: $grey 1px dotted;
+}
+
+.programs-list {
   @include grid;
-  margin-bottom: 100px;
   
   .program {
     @include col(3);
@@ -32,12 +41,11 @@
     }
   }
   
+  
   h2 {
     @include pt-bold;
     font-size: 15px;
-    a {
-      color: $base-color;
-    }
+    @include black-links;
   }
   
   li a {
@@ -64,7 +72,7 @@
 
 #designers-list-wrapper {
   margin-bottom: 30px;
-  > h2 {
+  h2.program-name {
     @include uppercase(0);
     font-size: 60px;
     line-height: 100px;

@@ -27,6 +27,17 @@ Global =
       $(document).imagesLoaded ->
         $('html,body').animate
           scrollTop: anchor.offset().top - 200
+    
+    $('#programs-header').sticky
+      topSpacing: 40
+    
+    $('#programs-header a').on 'click', (e) ->
+      program = $(this).attr('href').split('=').pop()
+      p = $("#program-#{program}")
+      if program != '' && p.length
+        e.preventDefault()
+        $('html,body').animate
+          scrollTop: p.offset().top - 100
       
   idfromhash: (hash) ->
     hash.split('#').pop().split('-').pop()

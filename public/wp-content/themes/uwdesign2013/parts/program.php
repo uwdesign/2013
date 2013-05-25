@@ -1,14 +1,15 @@
+<div id="program-<?php echo $program->slug; ?>">
+  
+  <h2 class="program-name"><?php echo $program->name; ?></h2>
 
-<h2><?php echo $program->name; ?></h2>
+  <?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
 
-<?php $users = get_objects_in_term($program->term_id, 'program' ); ?>
+  <div id="designers-list">
 
-<div id="designers-list">
+    <?php foreach( $users as $user_id ): ?>
+      <?php $user = get_userdata($user_id); ?>
+      <?php include( locate_template('parts/user.php') ); ?>
+    <?php endforeach; ?>
 
-  <?php foreach( $users as $user_id ): ?>
-    <?php $user = get_userdata($user_id); ?>
-    <?php include( locate_template('parts/user.php') ); ?>
-  <?php endforeach; ?>
-
+  </div>
 </div>
-

@@ -9,7 +9,7 @@
 
 <?php $coauthor_posts = get_coauthor_posts($author->user_login, $coauthors_plus, $wp_query); ?>
 
-<?php if ( $coauthor_posts->have_posts() ): ?>
+<?php if ( $author && $coauthor_posts->have_posts() ): ?>
   
   <div class="designer-single">
     
