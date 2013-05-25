@@ -31,8 +31,6 @@
         <?php the_category(); ?>
       </div>
     
-      <hr />
-    
     </div>
 
     <div class="post-single__images">
