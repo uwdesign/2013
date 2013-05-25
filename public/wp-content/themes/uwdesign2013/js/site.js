@@ -1645,7 +1645,7 @@
         });
       });
       $('#programs-header').sticky({
-        topSpacing: 40
+        topSpacing: 50
       });
       return $('#programs-header a').on('click', function(e) {
         var p, program;

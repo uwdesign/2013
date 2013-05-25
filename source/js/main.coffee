@@ -29,7 +29,7 @@ Global =
           scrollTop: anchor.offset().top - 200
     
     $('#programs-header').sticky
-      topSpacing: 40
+      topSpacing: 50
     
     $('#programs-header a').on 'click', (e) ->
       program = $(this).attr('href').split('=').pop()
