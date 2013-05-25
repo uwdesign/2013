@@ -112,19 +112,26 @@ Designers =
       height = $(this).height()
       end = top + height - content.height()
       
+      this_id = $(this).attr('id').split('-').pop()
+      list_item = $("[href=#post-#{this_id}]").closest('li')
+      
+      
+      
       if scroll > top && scroll < end
+        list_item.addClass('current')
         content.css 
           'position': 'fixed'
           'top': Designers.topOffset
           'bottom': 'auto'
       else if scroll > top
+        list_item.removeClass('current')
         content.css
           'position': 'absolute'
           'top':'auto'
           'bottom': 0
       else
+        list_item.removeClass('current')
         content.css
           'position': 'absolute'
           'top': 0
           'bottom': 'auto'
-      

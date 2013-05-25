@@ -205,6 +205,9 @@ $designer-single-info-height: 100px;
   .designer-single__posts-list {
     @include col(3);
     @extend .relative;
+    li.current {
+      list-style: disc outside;
+    }
     a {
       display: block;
     }

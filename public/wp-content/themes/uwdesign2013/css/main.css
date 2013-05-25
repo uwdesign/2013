@@ -190,6 +190,7 @@ em { font-style: italic; }
 .designer-single .designer-single__name h2 { text-transform: uppercase; letter-spacing: 2px; }
 .designer-single .designer-single__name .program-link { text-transform: uppercase; letter-spacing: 1px; }
 .designer-single .designer-single__posts-list { width: 25%; float: left; padding-left: 24px; padding-right: 24px; }
+.designer-single .designer-single__posts-list li.current { list-style: disc outside; }
 .designer-single .designer-single__posts-list a { display: block; }
 .designer-single .designer-single__portfolio { width: 16.66667%; float: left; padding-left: 24px; padding-right: 24px; }
 .designer-single .designer-single__portfolio a { display: block; }

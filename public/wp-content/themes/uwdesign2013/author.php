@@ -24,9 +24,11 @@
         
         <div class="designer-single__posts-list">
           <h5>Projects</h5>
-          <?php while($coauthor_posts->have_posts()): $coauthor_posts->the_post(); ?>
-            <a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a>
-          <?php endwhile; rewind_posts(); ?>
+          <ul>
+            <?php while($coauthor_posts->have_posts()): $coauthor_posts->the_post(); ?>
+              <li><a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; rewind_posts(); ?>
+          </ul>
         </div>
         
         <?php $userdata = get_userdata($author->ID); ?>
