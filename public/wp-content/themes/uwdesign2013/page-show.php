@@ -15,7 +15,6 @@
   <div data-img="N" data-0="top:-600px" data-600="top:400px"></div>
   
   <div data-img="shape1a" data-0="top:200px" data-1000="top:600px"></div>
-  <div data-img="shape1b" data-0="top:500px" data-1000="top:400px"></div>
   
   <div data-img="shape2b" data-0="left:-15px;top:600px" data-400="left:-10px;top:350px"></div>
   <div data-img="shape2a" data-0="top:-200px" data-300="top:350px"></div>
@@ -23,12 +22,9 @@
   <div data-img="shape3a" data-0="top:100px" data-1000="top:600px"></div>
   
   <div data-img="shape4a" data-0="top:500px" data-900="top:230px"></div>
-  <div data-img="shape4b" data-0="top:800px" data-1200="top:100px"></div>
   
   <div data-img="shape4d" data-0="top:-217px;left:-68px" data-900="top:-600px"></div>
-  <div data-img="shape4c" data-0="top:-100px" data-900="top:-600px"></div>
 
-    
   <div data-img="shape5a" data-300="top:1200px" data-900="top:450px;left:30px"></div>
   <div data-img="shape5b" data-300="top:900px" data-900="top:450px;left:30px"></div>
 
