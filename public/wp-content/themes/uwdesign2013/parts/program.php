@@ -10,7 +10,7 @@
   }, $users);?>
   
   <?php usort($all_users, function($usera, $userb){
-    return strnatcmp ( $usera->display_name, $userb->display_name );
+    return strnatcmp ( array_pop(explode(' ', $usera->display_name)), array_pop(explode(' ', $userb->display_name)) );
   }); ?>
   
   <div id="designers-list">
