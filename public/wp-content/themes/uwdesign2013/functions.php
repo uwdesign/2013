@@ -208,17 +208,7 @@
   
   add_action( 'init', 'register_things' );
   
-    
-    
-    function wpr_maintenance_mode() {
-      if ( !is_user_logged_in() ) {
-        wp_die('<img src="/lightsplash.jpg" style="width:640px" />', 'Coming soon');
-      }
-    }
-    
-    add_action('wp_head', 'wpr_maintenance_mode');
-    
-     
+
 
 
 
