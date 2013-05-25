@@ -19,12 +19,9 @@ html {
 
 body {
   font-size: $body;
-  line-height: $body-l;
-  
+  line-height: $body-l;  
   color: $base-color;
   @include pt;
-  
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, p, ul, ol, blockquote {

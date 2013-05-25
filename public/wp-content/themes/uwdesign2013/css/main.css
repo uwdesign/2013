@@ -11,7 +11,7 @@
 
 html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
 
-body { font-size: 13px; line-height: 20px; color: #333333; font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; overflow-x: hidden; }
+body { font-size: 13px; line-height: 20px; color: #333333; font-family: "PT Serif Caption", Georgia, 'Times New Roman', Times, serif; font-size-adjust: 0.53; }
 
 h1, h2, h3, h4, h5, p, ul, ol, blockquote { margin-bottom: 20px; }
 
